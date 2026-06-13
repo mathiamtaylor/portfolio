@@ -88,7 +88,7 @@
             </div>
         </div>
         
-        <!-- Menu Déroulant -->
+        <!-- Menu Déroulant Universel (Desktop & Mobile) -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full border-b border-dark-border bg-dark-base/95 shadow-2xl backdrop-blur-xl transition-all">
             <div class="mx-auto max-w-5xl px-6 py-8">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
@@ -129,7 +129,7 @@
         </div>
     </header>
 
-    <section class="relative min-h-[90vh] flex items-center justify-center py-20 z-10">
+    <section class="relative min-h-[90vh] flex flex-col justify-center py-20 z-10">
         <!-- Floating Badges (Visible on Desktop) -->
         <div class="absolute top-1/4 left-[5%] lg:left-[10%] xl:left-[15%] glass-card px-5 py-2.5 rounded-full flex items-center gap-3 float-animation hidden md:flex shadow-lg shadow-brand-pin/10" style="animation-delay: 0s;">
             <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-pin/20 text-brand-pin"><i class="fa-solid fa-bullseye"></i></div>
@@ -140,7 +140,7 @@
             <span class="text-xs font-bold text-slate-200 tracking-wide"><span class="lang-fr">Profil International</span><span class="lang-en hidden">International Profile</span><span class="lang-es hidden">Perfil Internacional</span></span>
         </div>
 
-        <div class="mx-auto max-w-7xl px-6 w-full text-center relative z-10">
+        <div class="mx-auto max-w-7xl px-6 w-full text-center relative z-10 mt-10">
             <div class="flex justify-center mb-8">
                 <span class="inline-flex items-center gap-2 rounded-full border border-brand-pin/30 bg-brand-pin/10 px-4 py-1.5 text-xs font-bold tracking-wider text-brand-pin shadow-[0_0_15px_rgba(16,185,129,0.2)]">
                     <span class="h-2 w-2 rounded-full bg-brand-pin animate-pulse"></span>
@@ -154,28 +154,29 @@
                 Mathiam <span class="bg-gradient-to-r from-brand-pin via-emerald-400 to-brand-blue bg-clip-text text-transparent">Taylor</span>
             </h1>
             
-            <p class="mt-10 max-w-3xl text-base text-slate-400 sm:text-lg mx-auto leading-relaxed">
+            <p class="mt-10 max-w-4xl text-base text-slate-400 sm:text-lg mx-auto leading-relaxed">
                 <span class="lang-fr">
                     Actuellement en troisième année de <strong class="text-white font-medium">BUT Techniques de Commercialisation</strong> à Bordeaux (Parcours Marketing digital, e-business et entrepreneuriat) et en alternance à l’<strong class="text-white font-medium">Office de Tourisme du Pays Tarusate</strong>, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’<strong class="text-brand-pin font-medium">Université de Lima (Pérou)</strong> dans le cadre d’un Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI).
                 </span>
                 <span class="lang-en hidden">
-                    Currently in my third year of a <strong class="text-white font-medium">Bachelor's in Business and Marketing</strong> in Bordeaux (Digital Marketing, E-business and Entrepreneurship track) and doing a work-study program at the <strong class="text-white font-medium">Pays Tarusate Tourist Office</strong>, I am preparing for a one-year university exchange at the <strong class="text-brand-pin font-medium">University of Lima (Peru)</strong> as part of an International Technological University Diploma.
+                    Currently in my third year of a <strong class="text-white font-medium">Bachelor's in Business and Marketing</strong> in Bordeaux (Digital Marketing, E-business and Entrepreneurship track) and doing a work-study program at the <strong class="text-white font-medium">Pays Tarusate Tourist Office</strong>, I am preparing for a one-year university exchange at the <strong class="text-brand-pin font-medium">University of Lima (Peru)</strong> as part of an International Technological University Diploma (DUETI).
                 </span>
                 <span class="lang-es hidden">
-                    Actualmente en mi tercer año de <strong class="text-white font-medium">Grado en Comercialización</strong> en Burdeos (especialidad en marketing digital, e-business y emprendimiento) y en alternancia en la <strong class="text-white font-medium">Oficina de Turismo del Pays Tarusate</strong>, me preparo para realizar un intercambio universitario de un año en la <strong class="text-brand-pin font-medium">Universidad de Lima (Perú)</strong> en el marco de un Diploma Universitario de Estudios Tecnológicos Internacionales.
+                    Actualmente en mi tercer año de <strong class="text-white font-medium">Grado en Comercialización</strong> en Burdeos (especialidad en marketing digital, e-business y emprendimiento) y en alternancia en la <strong class="text-white font-medium">Oficina de Turismo del Pays Tarusate</strong>, me preparo para realizar un intercambio universitario de un año en la <strong class="text-brand-pin font-medium">Universidad de Lima (Perú)</strong> en el marco de un Diploma Universitario de Estudios Tecnológicos Internacionales (DUETI).
                 </span>
             </p>
+        </div>
 
-            <div class="absolute -bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation">
-                <span class="text-[10px] font-bold uppercase tracking-widest"><span class="lang-fr">Découvrir</span><span class="lang-en hidden">Discover</span><span class="lang-es hidden">Descubrir</span></span>
-                <div class="h-8 w-5 rounded-full border-2 border-slate-500 flex justify-center pt-1">
-                    <div class="h-1.5 w-1.5 rounded-full bg-slate-500 animate-bounce"></div>
-                </div>
+        <!-- Bouton Découvrir abaissé -->
+        <div class="absolute -bottom-28 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation">
+            <span class="text-[10px] font-bold uppercase tracking-widest"><span class="lang-fr">Découvrir</span><span class="lang-en hidden">Discover</span><span class="lang-es hidden">Descubrir</span></span>
+            <div class="h-8 w-5 rounded-full border-2 border-slate-500 flex justify-center pt-1">
+                <div class="h-1.5 w-1.5 rounded-full bg-slate-500 animate-bounce"></div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 relative z-10 border-t border-dark-border/20">
+    <section id="about" class="py-32 relative z-10 border-t border-dark-border/20">
         <div class="mx-auto max-w-7xl px-6">
             <div class="mb-12">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-pin flex items-center gap-2">
@@ -194,15 +195,6 @@
                         <!-- Animated glowing frame -->
                         <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-pin via-brand-blue to-brand-ochre opacity-30 blur transition duration-1000 group-hover:opacity-70 group-hover:duration-200"></div>
                         <img class="relative rounded-3xl border border-dark-border object-cover w-full h-full shadow-2xl" alt="Mathiam Taylor" src="IMG_4191.jpeg">
-                        
-                        <!-- Mini stat badge on image -->
-                        <div class="absolute -bottom-5 -right-5 glass-card px-4 py-3 rounded-2xl flex items-center gap-3 shadow-xl transition-transform duration-300 group-hover:-translate-y-2">
-                            <i class="fa-solid fa-graduation-cap text-xl text-brand-pin"></i>
-                            <div class="flex flex-col">
-                                <span class="text-sm font-black text-white">BUT TC</span>
-                                <span class="text-[10px] text-slate-400 font-bold uppercase"><span class="lang-fr">En cours</span><span class="lang-en hidden">In progress</span><span class="lang-es hidden">En curso</span></span>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -517,18 +509,23 @@
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-brand-pin">
                         <span class="lang-fr">Déc. 2025 -<br>Août 2026</span><span class="lang-en hidden">Dec 2025 -<br>Aug 2026</span><span class="lang-es hidden">Dic 2025 -<br>Ago 2026</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-pin/50 group-hover:-translate-y-1">
-                        <h3 class="text-base font-extrabold text-white">
-                            <span class="lang-fr">Responsable Communication et Marketing (Alternance)</span>
-                            <span class="lang-en hidden">Communication and Marketing Manager (Work-study)</span>
-                            <span class="lang-es hidden">Responsable de Comunicación y Marketing (Alternancia)</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 font-medium mt-1">Office de Tourisme du Pays Tarusate — Tartas</p>
-                        <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-pin">
-                            <li><span class="lang-fr">Construction et mise en œuvre du plan de communication du territoire.</span><span class="lang-en hidden">Construction and implementation of the communication plan.</span><span class="lang-es hidden">Construcción e implementación del plan de comunicación.</span></li>
-                            <li><span class="lang-fr">Réalisation d’un mémoire universitaire sur l’influence des réseaux sociaux sur le tourisme landais.</span><span class="lang-en hidden">Writing a university thesis on the influence of social networks on tourism in the Landes region.</span><span class="lang-es hidden">Redacción de una tesina universitaria sobre la influencia de las redes sociales en el turismo de las Landas.</span></li>
-                            <li><span class="lang-fr">Missions variées (accueil, événementiel, gestion de projet globale).</span><span class="lang-en hidden">Various missions (reception, events, overall project management).</span><span class="lang-es hidden">Diversas misiones (recepción, eventos, gestión global de proyectos).</span></li>
-                        </ul>
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-pin/50 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="shrink-0 pt-1">
+                            <img src="otpt.png" alt="OTPT" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                        </div>
+                        <div>
+                            <h3 class="text-base font-extrabold text-white">
+                                <span class="lang-fr">Responsable Communication et Marketing (Alternance)</span>
+                                <span class="lang-en hidden">Communication and Marketing Manager (Work-study)</span>
+                                <span class="lang-es hidden">Responsable de Comunicación y Marketing (Alternancia)</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Office de Tourisme du Pays Tarusate — Tartas</p>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-pin">
+                                <li><span class="lang-fr">Construction et mise en œuvre du plan de communication du territoire.</span><span class="lang-en hidden">Construction and implementation of the communication plan.</span><span class="lang-es hidden">Construcción e implementación del plan de comunicación.</span></li>
+                                <li><span class="lang-fr">Réalisation d’un mémoire universitaire sur l’influence des réseaux sociaux sur le tourisme landais.</span><span class="lang-en hidden">Writing a university thesis on the influence of social networks on tourism in the Landes region.</span><span class="lang-es hidden">Redacción de una tesina universitaria sobre la influencia de las redes sociales en el turismo de las Landas.</span></li>
+                                <li><span class="lang-fr">Missions variées (accueil, événementiel, gestion de projet globale).</span><span class="lang-en hidden">Various missions (reception, events, overall project management).</span><span class="lang-es hidden">Diversas misiones (recepción, eventos, gestión global de proyectos).</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -538,16 +535,21 @@
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-brand-blue">
                         <span class="lang-fr">Juil. 2025</span><span class="lang-en hidden">Jul 2025</span><span class="lang-es hidden">Jul 2025</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-blue/50 group-hover:-translate-y-1">
-                        <h3 class="text-base font-extrabold text-white">
-                            <span class="lang-fr">Chargé d'accueil (CDD)</span><span class="lang-en hidden">Receptionist (Fixed-term)</span><span class="lang-es hidden">Gestor de Atención al Cliente (Contrato)</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 font-medium mt-1">Crédit Agricole — Saint-Paul-lès-Dax</p>
-                        <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-blue">
-                            <li><span class="lang-fr">Travail en équipe.</span><span class="lang-en hidden">Teamwork.</span><span class="lang-es hidden">Trabajo en equipo.</span></li>
-                            <li><span class="lang-fr">Accueil quotidien et analyse des besoins des clients.</span><span class="lang-en hidden">Daily reception and analysis of customer needs.</span><span class="lang-es hidden">Atención diaria y análisis de las necesidades del cliente.</span></li>
-                            <li><span class="lang-fr">Traitement des opérations courantes (virements, retraits).</span><span class="lang-en hidden">Processing of routine operations (transfers, withdrawals).</span><span class="lang-es hidden">Tratamiento de operaciones corrientes (transferencias, reintegros).</span></li>
-                        </ul>
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-blue/50 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="shrink-0 pt-1">
+                            <img src="ca.png" alt="Crédit Agricole" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                        </div>
+                        <div>
+                            <h3 class="text-base font-extrabold text-white">
+                                <span class="lang-fr">Chargé d'accueil (CDD)</span><span class="lang-en hidden">Receptionist (Fixed-term)</span><span class="lang-es hidden">Gestor de Atención al Cliente (Contrato)</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Crédit Agricole — Saint-Paul-lès-Dax</p>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-blue">
+                                <li><span class="lang-fr">Travail en équipe.</span><span class="lang-en hidden">Teamwork.</span><span class="lang-es hidden">Trabajo en equipo.</span></li>
+                                <li><span class="lang-fr">Accueil quotidien et analyse des besoins des clients.</span><span class="lang-en hidden">Daily reception and analysis of customer needs.</span><span class="lang-es hidden">Atención diaria y análisis de las necesidades del cliente.</span></li>
+                                <li><span class="lang-fr">Traitement des opérations courantes (virements, retraits).</span><span class="lang-en hidden">Processing of routine operations (transfers, withdrawals).</span><span class="lang-es hidden">Tratamiento de operaciones corrientes (transferencias, reintegros).</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -557,16 +559,21 @@
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Janv. - Févr.<br>2025</span><span class="lang-en hidden">Jan - Feb<br>2025</span><span class="lang-es hidden">Ene - Feb<br>2025</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-slate-500/50 hover:-translate-y-1">
-                        <h3 class="text-base font-extrabold text-white">
-                            <span class="lang-fr">Responsable Marketing Digital (Stage)</span><span class="lang-en hidden">Digital Marketing Manager (Internship)</span><span class="lang-es hidden">Responsable de Marketing Digital (Prácticas)</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 font-medium mt-1">Thermes de Saubusse — Saubusse</p>
-                        <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-slate-500">
-                            <li><span class="lang-fr">Audit complet de l'écosystème numérique.</span><span class="lang-en hidden">Comprehensive audit of the digital ecosystem.</span><span class="lang-es hidden">Auditoría completa del ecosistema digital.</span></li>
-                            <li><span class="lang-fr">Étude comparative de solutions d'Intelligence Artificielle.</span><span class="lang-en hidden">Comparative study of AI solutions.</span><span class="lang-es hidden">Estudio comparativo de soluciones de IA.</span></li>
-                            <li><span class="lang-fr">Conception de tableaux de bord Excel automatisés.</span><span class="lang-en hidden">Design of automated Excel dashboards.</span><span class="lang-es hidden">Diseño de cuadros de mando Excel automatizados.</span></li>
-                        </ul>
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-slate-500/50 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="shrink-0 pt-1">
+                            <img src="thermes.png" alt="Thermes de Saubusse" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                        </div>
+                        <div>
+                            <h3 class="text-base font-extrabold text-white">
+                                <span class="lang-fr">Responsable Marketing Digital (Stage)</span><span class="lang-en hidden">Digital Marketing Manager (Internship)</span><span class="lang-es hidden">Responsable de Marketing Digital (Prácticas)</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Thermes de Saubusse — Saubusse</p>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-slate-500">
+                                <li><span class="lang-fr">Audit complet de l'écosystème numérique.</span><span class="lang-en hidden">Comprehensive audit of the digital ecosystem.</span><span class="lang-es hidden">Auditoría completa del ecosistema digital.</span></li>
+                                <li><span class="lang-fr">Étude comparative de solutions d'Intelligence Artificielle.</span><span class="lang-en hidden">Comparative study of AI solutions.</span><span class="lang-es hidden">Estudio comparativo de soluciones de IA.</span></li>
+                                <li><span class="lang-fr">Conception de tableaux de bord Excel automatisés.</span><span class="lang-en hidden">Design of automated Excel dashboards.</span><span class="lang-es hidden">Diseño de cuadros de mando Excel automatizados.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -576,16 +583,21 @@
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Janv. - Févr.<br>2025</span><span class="lang-en hidden">Jan - Feb<br>2025</span><span class="lang-es hidden">Ene - Feb<br>2025</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-slate-500/50 hover:-translate-y-1">
-                        <h3 class="text-base font-extrabold text-white">
-                            <span class="lang-fr">Chargé de Communication (Stage)</span><span class="lang-en hidden">Communications Officer (Internship)</span><span class="lang-es hidden">Responsable de Comunicación (Prácticas)</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 font-medium mt-1">BSC Unna — Unna (Allemagne / Germany / Alemania)</p>
-                        <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-slate-500">
-                            <li><span class="lang-fr">Construction d'un plan de communication.</span><span class="lang-en hidden">Development of a communication plan.</span><span class="lang-es hidden">Construcción de un plan de comunicación.</span></li>
-                            <li><span class="lang-fr">Création de contenu pour les réseaux sociaux.</span><span class="lang-en hidden">Creation of content for social networks.</span><span class="lang-es hidden">Creación de contenido para redes sociales.</span></li>
-                            <li><span class="lang-fr">Réalisation d'une veille concurrentielle.</span><span class="lang-en hidden">Conducting a competitive watch.</span><span class="lang-es hidden">Realización de vigilancia competitiva.</span></li>
-                        </ul>
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-slate-500/50 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="shrink-0 pt-1">
+                            <img src="unna.jpeg" alt="BSC Unna" class="w-16 h-16 rounded-xl object-cover bg-white/5 p-1 border border-dark-border">
+                        </div>
+                        <div>
+                            <h3 class="text-base font-extrabold text-white">
+                                <span class="lang-fr">Chargé de Communication (Stage)</span><span class="lang-en hidden">Communications Officer (Internship)</span><span class="lang-es hidden">Responsable de Comunicación (Prácticas)</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 font-medium mt-1">BSC Unna — Unna (Allemagne / Germany / Alemania)</p>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-slate-500">
+                                <li><span class="lang-fr">Construction d'un plan de communication.</span><span class="lang-en hidden">Development of a communication plan.</span><span class="lang-es hidden">Construcción de un plan de comunicación.</span></li>
+                                <li><span class="lang-fr">Création de contenu pour les réseaux sociaux.</span><span class="lang-en hidden">Creation of content for social networks.</span><span class="lang-es hidden">Creación de contenido para redes sociales.</span></li>
+                                <li><span class="lang-fr">Réalisation d'une veille concurrentielle.</span><span class="lang-en hidden">Conducting a competitive watch.</span><span class="lang-es hidden">Realización de vigilancia competitiva.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -595,16 +607,21 @@
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Juil. 2024</span><span class="lang-en hidden">Jul 2024</span><span class="lang-es hidden">Jul 2024</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-blue/30 group-hover:-translate-y-1">
-                        <h3 class="text-base font-extrabold text-white">
-                            <span class="lang-fr">Chargé d'accueil (CDD)</span><span class="lang-en hidden">Receptionist (Fixed-term)</span><span class="lang-es hidden">Gestor de Atención al Cliente (Contrato)</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 font-medium mt-1">Crédit Agricole — Saint-Paul-lès-Dax</p>
-                        <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-blue/50">
-                            <li><span class="lang-fr">Travail en équipe.</span><span class="lang-en hidden">Teamwork.</span><span class="lang-es hidden">Trabajo en equipo.</span></li>
-                            <li><span class="lang-fr">Accueil quotidien et analyse des besoins des clients.</span><span class="lang-en hidden">Daily reception and analysis of customer needs.</span><span class="lang-es hidden">Atención diaria y análisis de las necesidades del cliente.</span></li>
-                            <li><span class="lang-fr">Traitement des opérations courantes (virements, retraits).</span><span class="lang-en hidden">Processing of routine operations (transfers, withdrawals).</span><span class="lang-es hidden">Tratamiento de operaciones corrientes (transferencias, reintegros).</span></li>
-                        </ul>
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-blue/30 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="shrink-0 pt-1">
+                            <img src="ca.png" alt="Crédit Agricole" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                        </div>
+                        <div>
+                            <h3 class="text-base font-extrabold text-white">
+                                <span class="lang-fr">Chargé d'accueil (CDD)</span><span class="lang-en hidden">Receptionist (Fixed-term)</span><span class="lang-es hidden">Gestor de Atención al Cliente (Contrato)</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Crédit Agricole — Saint-Paul-lès-Dax</p>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-blue/50">
+                                <li><span class="lang-fr">Travail en équipe.</span><span class="lang-en hidden">Teamwork.</span><span class="lang-es hidden">Trabajo en equipo.</span></li>
+                                <li><span class="lang-fr">Accueil quotidien et analyse des besoins des clients.</span><span class="lang-en hidden">Daily reception and analysis of customer needs.</span><span class="lang-es hidden">Atención diaria y análisis de las necesidades del cliente.</span></li>
+                                <li><span class="lang-fr">Traitement des opérations courantes (virements, retraits).</span><span class="lang-en hidden">Processing of routine operations (transfers, withdrawals).</span><span class="lang-es hidden">Tratamiento de operaciones corrientes (transferencias, reintegros).</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -614,16 +631,21 @@
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Janv. 2024</span><span class="lang-en hidden">Jan 2024</span><span class="lang-es hidden">Ene 2024</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-pin/30 group-hover:-translate-y-1">
-                        <h3 class="text-base font-extrabold text-white">
-                            <span class="lang-fr">Conseiller de vente (Stage)</span><span class="lang-en hidden">Sales Assistant (Internship)</span><span class="lang-es hidden">Asesor de Ventas (Prácticas)</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 font-medium mt-1">SPORT 2000 — Dax</p>
-                        <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-pin/50">
-                            <li><span class="lang-fr">Accueil et accompagnement de la clientèle en magasin.</span><span class="lang-en hidden">Welcoming and assisting customers in-store.</span><span class="lang-es hidden">Atención y acompañamiento de clientes en tienda.</span></li>
-                            <li><span class="lang-fr">Analyse des besoins et proposition de solutions adaptées.</span><span class="lang-en hidden">Analyzing needs and proposing suitable solutions.</span><span class="lang-es hidden">Análisis de necesidades y propuesta de soluciones.</span></li>
-                            <li><span class="lang-fr">Participation aux actions de merchandising.</span><span class="lang-en hidden">Participation in merchandising actions.</span><span class="lang-es hidden">Participación en acciones de merchandising.</span></li>
-                        </ul>
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-pin/30 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="shrink-0 pt-1">
+                            <img src="sport2000.png" alt="SPORT 2000" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                        </div>
+                        <div>
+                            <h3 class="text-base font-extrabold text-white">
+                                <span class="lang-fr">Conseiller de vente (Stage)</span><span class="lang-en hidden">Sales Assistant (Internship)</span><span class="lang-es hidden">Asesor de Ventas (Prácticas)</span>
+                            </h3>
+                            <p class="text-xs text-slate-400 font-medium mt-1">SPORT 2000 — Dax</p>
+                            <ul class="mt-4 space-y-2 text-xs text-slate-300 list-disc pl-4 marker:text-brand-pin/50">
+                                <li><span class="lang-fr">Accueil et accompagnement de la clientèle en magasin.</span><span class="lang-en hidden">Welcoming and assisting customers in-store.</span><span class="lang-es hidden">Atención y acompañamiento de clientes en tienda.</span></li>
+                                <li><span class="lang-fr">Analyse des besoins et proposition de solutions adaptées.</span><span class="lang-en hidden">Analyzing needs and proposing suitable solutions.</span><span class="lang-es hidden">Análisis de necesidades y propuesta de soluciones.</span></li>
+                                <li><span class="lang-fr">Participation aux actions de merchandising.</span><span class="lang-en hidden">Participation in merchandising actions.</span><span class="lang-es hidden">Participación en acciones de merchandising.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -631,7 +653,7 @@
     </section>
 
     <section id="formation" class="py-24 relative z-10 border-t border-dark-border/20 bg-dark-card/5">
-        <div class="mx-auto max-w-5xl px-6">
+        <div class="mx-auto max-w-7xl px-6">
             <div class="mb-16 text-center">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-blue flex justify-center items-center gap-2">
                     <span class="w-8 h-px bg-brand-blue"></span>
@@ -643,7 +665,27 @@
                 </h2>
             </div>
 
-            <div class="grid gap-8 md:grid-cols-2">
+            <div class="grid gap-8 lg:grid-cols-3">
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-brand-pin/40">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-plane-departure text-xl"></i></div>
+                            <span class="text-xs font-black uppercase tracking-widest text-slate-500 bg-dark-base px-3 py-1 rounded-full border border-dark-border">2026 - 2027</span>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-white mb-2">
+                            <span class="lang-fr">Échange universitaire</span>
+                            <span class="lang-en hidden">University exchange</span>
+                            <span class="lang-es hidden">Intercambio universitario</span>
+                        </h3>
+                        <p class="text-sm font-bold text-brand-pin mb-4">Universidad de Lima (Pérou / Peru)</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            <span class="lang-fr">Dans le cadre d'un Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI).</span>
+                            <span class="lang-en hidden">As part of an International Technological University Diploma (DUETI).</span>
+                            <span class="lang-es hidden">Como parte de un Diploma Universitario de Estudios Tecnológicos Internacionales (DUETI).</span>
+                        </p>
+                    </div>
+                </div>
+
                 <div class="glass-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-brand-blue/40">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
@@ -722,9 +764,9 @@
                         <span class="lang-en hidden">Practicing competitive sports and participating in endurance events have forged my perseverance, ambition, and strong discipline. These are qualities I apply daily in my professional missions.</span>
                         <span class="lang-es hidden">La práctica deportiva de competición y la participación en pruebas de resistencia han forjado mi perseverancia, mi ambición y un gran rigor. Son cualidades que aplico a diario en mis misiones profesionales.</span>
                     </p>
-                    
-                    <div class="mt-2 rounded-xl overflow-hidden border border-dark-border shadow-lg mt-auto">
-                        <img src="sport.png" alt="Sport" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+
+                    <div class="mt-4 rounded-xl overflow-hidden border border-dark-border opacity-90 group-hover:opacity-100 transition-opacity">
+                        <img src="sport.png" alt="Sport" class="w-full h-auto object-cover">
                     </div>
                 </div>
 
@@ -745,9 +787,9 @@
                         <span class="lang-en hidden">United States, England, Spain, Italy, Netherlands, Sweden, Albania, Ivory Coast, India...<br><br>Discovering these countries has shaped my curiosity and adaptability. These immersions allowed me to practice foreign languages in real conditions and develop genuine intercultural fluency to connect with others.</span>
                         <span class="lang-es hidden">Estados Unidos, Inglaterra, España, Italia, Países Bajos, Suecia, Albania, Costa de Marfil, India...<br><br>Descubrir estos países ha forjado mi curiosidad y mi gran capacidad de adaptación. Estas inmersiones regulares me han permitido practicar idiomas en condiciones reales y desarrollar una verdadera facilidad para relacionarme con los demás.</span>
                     </p>
-                    
-                    <div class="mt-2 rounded-xl overflow-hidden border border-dark-border shadow-lg mt-auto">
-                        <img src="voyage.png" alt="Voyages" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300">
+
+                    <div class="mt-4 rounded-xl overflow-hidden border border-dark-border opacity-90 group-hover:opacity-100 transition-opacity">
+                        <img src="voyage.png" alt="Voyages" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
@@ -796,7 +838,7 @@
                         </div>
                         
                         <div class="relative pl-8">
-                            <div class="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue text-dark-base font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.4)]">2</div>
+                            <div class="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin text-dark-base font-extrabold text-sm shadow-[0_0_15px_rgba(16,185,129,0.4)]">2</div>
                             <div class="space-y-2 pt-1">
                                 <h4 class="text-lg font-bold text-white">
                                     <span class="lang-fr">Objectif à moyen/long terme</span><span class="lang-en hidden">Medium/long-term goal</span><span class="lang-es hidden">Objetivo a medio/largo plazo</span>
@@ -813,7 +855,7 @@
 
                 <!-- Couverture Mémoire (Droite) -->
                 <div class="lg:col-span-5 flex justify-center mt-8 lg:mt-0">
-                    <div class="glass-card p-6 rounded-2xl border-t-4 border-t-brand-blue w-full max-w-sm transition-transform hover:-translate-y-2 duration-300">
+                    <div class="glass-card p-6 md:p-8 rounded-2xl border-t-4 border-t-brand-blue w-full max-w-sm transition-transform hover:-translate-y-2 duration-300">
                         <p class="text-[11px] text-brand-blue font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
                             <i class="fa-solid fa-book"></i> <span class="lang-fr">Sujet de Mémoire (BUT)</span><span class="lang-en hidden">Thesis Subject (Bachelor)</span><span class="lang-es hidden">Tema de Tesina (Grado)</span>
                         </p>
@@ -822,8 +864,8 @@
                             <span class="lang-en hidden">"Digital marketing as a lever to rebalance tourist flows"</span>
                             <span class="lang-es hidden">"El marketing digital como palanca para reequilibrar los flujos turísticos"</span>
                         </p>
-                        <div class="rounded-xl overflow-hidden border border-dark-border shadow-2xl relative flex justify-center">
-                            <img src="1.png" alt="Couverture Mémoire" class="max-w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity">
+                        <div class="rounded-xl overflow-hidden border border-dark-border shadow-2xl relative flex justify-center bg-dark-base p-1">
+                            <img src="1.png" alt="Couverture Mémoire" class="w-full h-auto object-cover rounded-lg">
                         </div>
                     </div>
                 </div>
@@ -850,7 +892,7 @@
 
             <!-- Affichage de l'image du CV dynamique -->
             <div class="mx-auto max-w-4xl rounded-2xl overflow-hidden border border-dark-border shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                <img id="cv-img-display" src="Capture d’écran 2026-06-13 à 15.48.32.png" alt="CV Mathiam Taylor" class="w-full h-auto object-cover">
+                <img id="cv-img-display" src="Capture d’écran 2026-06-13 à 15.48.32.png" alt="CV Mathiam Taylor" class="w-full h-auto object-cover bg-white">
             </div>
         </div>
     </section>
