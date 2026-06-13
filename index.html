@@ -11,16 +11,8 @@
             theme: {
                 extend: {
                     colors: {
-                        dark: {
-                            base: '#0B0F19',
-                            card: '#161F30',
-                            border: '#23354F'
-                        },
-                        brand: {
-                            pin: '#10b981', // Émeraude/Tourisme
-                            ochre: '#f97316', // Ocre/Sport
-                            blue: '#3b82f6' // Bleu/Éducation
-                        }
+                        dark: { base: '#0B0F19', card: '#161F30', border: '#23354F' },
+                        brand: { pin: '#10b981', ochre: '#f97316', blue: '#3b82f6' }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -30,10 +22,8 @@
             }
         }
     </script>
-    <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0B0F19; }
         h1, h2, h3, h4, .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -43,20 +33,10 @@
         ::-webkit-scrollbar-thumb:hover { background: #10b981; }
         
         .glass-card {
-            background: rgba(22, 31, 48, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(35, 53, 79, 0.5);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(22, 31, 48, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(35, 53, 79, 0.5);
         }
-        .glass-card:hover {
-            border-color: rgba(16, 185, 129, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+        .glass-card:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15); }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .float-animation { animation: float 4s ease-in-out infinite; }
         
         .hidden { display: none !important; }
@@ -64,26 +44,19 @@
 </head>
 <body class="text-slate-100 antialiased selection:bg-brand-pin selection:text-dark-base">
 
-    <!-- Glows background -->
     <div class="fixed pointer-events-none inset-0 z-0 overflow-hidden">
         <div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-brand-pin/10 blur-[150px]"></div>
         <div class="absolute top-[40%] -left-40 w-[500px] h-[500px] rounded-full bg-brand-ochre/5 blur-[130px]"></div>
         <div class="absolute -bottom-40 right-20 w-[600px] h-[600px] rounded-full bg-brand-blue/10 blur-[160px]"></div>
     </div>
 
-    <!-- Header / Navigation -->
     <header class="sticky top-0 z-50 w-full border-b border-dark-border/40 bg-dark-base/80 backdrop-blur-lg">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <a href="#" class="flex items-center gap-3 group">
-                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pin to-brand-blue text-sm font-black text-dark-base group-hover:scale-105 transition-transform">
-                    MT
-                </span>
-                <span class="font-display font-extrabold tracking-tight text-white group-hover:text-brand-pin transition-colors">
-                    Mathiam Taylor
-                </span>
+                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pin to-brand-blue text-sm font-black text-dark-base group-hover:scale-105 transition-transform">MT</span>
+                <span class="font-display font-extrabold tracking-tight text-white group-hover:text-brand-pin transition-colors">Mathiam Taylor</span>
             </a>
             
-            <!-- Desktop Navigation -->
             <nav class="hidden items-center gap-6 md:flex">
                 <a href="#about" class="text-sm font-medium text-slate-400 transition hover:text-white">
                     <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span><span class="lang-es hidden">Sobre mí</span>
@@ -111,20 +84,16 @@
                 </a>
             </nav>
 
-            <!-- Language and Menu Actions -->
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-1 bg-dark-card/80 rounded-full p-1 border border-dark-border">
                     <button onclick="switchLanguage('fr')" id="btn-fr" class="lang-btn px-2 py-1 text-[10px] font-bold rounded-full bg-brand-pin text-dark-base transition">FR</button>
                     <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn px-2 py-1 text-[10px] font-bold rounded-full text-slate-400 hover:text-white transition">EN</button>
                     <button onclick="switchLanguage('es')" id="btn-es" class="lang-btn px-2 py-1 text-[10px] font-bold rounded-full text-slate-400 hover:text-white transition">ES</button>
                 </div>
-                <button id="menu-btn" class="text-slate-300 focus:outline-none md:hidden" aria-label="Menu">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
+                <button id="menu-btn" class="text-slate-300 focus:outline-none md:hidden" aria-label="Menu"><i class="fa-solid fa-bars text-xl"></i></button>
             </div>
         </div>
         
-        <!-- Mobile Dropdown Menu -->
         <div id="mobile-menu" class="hidden border-t border-dark-border bg-dark-base/95 px-6 py-4 shadow-xl md:hidden">
             <div class="flex flex-col gap-4">
                 <a href="#about" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">À propos</span><span class="lang-en hidden">About</span><span class="lang-es hidden">Sobre mí</span></a>
@@ -134,15 +103,12 @@
                 <a href="#interets" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Centres d'intérêt</span><span class="lang-en hidden">Interests</span><span class="lang-es hidden">Intereses</span></a>
                 <a href="#projet-pro" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Projet pro</span><span class="lang-en hidden">Career Plan</span><span class="lang-es hidden">Proyecto</span></a>
                 <a href="#cv" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Mon CV</span><span class="lang-en hidden">Resume</span><span class="lang-es hidden">Mi CV</span></a>
-                <a href="#contact" class="mobile-link rounded-xl border border-brand-pin bg-brand-pin/5 py-3 text-center text-base font-bold text-brand-pin"><span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span></a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="relative min-h-[90vh] flex items-center justify-center py-20 z-10">
         <div class="mx-auto max-w-7xl px-6 w-full text-center">
-            
             <div class="flex justify-center mb-6">
                 <span class="inline-flex items-center gap-2 rounded-full border border-brand-pin/30 bg-brand-pin/10 px-4 py-1.5 text-xs font-bold tracking-wider text-brand-pin">
                     <span class="h-2 w-2 rounded-full bg-brand-pin animate-pulse"></span>
@@ -156,16 +122,19 @@
                 Mathiam <span class="bg-gradient-to-r from-brand-pin via-[#34d399] to-brand-blue bg-clip-text text-transparent">Taylor</span>
             </h1>
             
-            <p class="mt-8 max-w-4xl text-base text-slate-300 sm:text-lg mx-auto leading-relaxed">
+            <p class="mt-8 max-w-2xl text-base text-slate-300 sm:text-lg mx-auto leading-relaxed">
                 <span class="lang-fr">Actuellement en troisième année de BUT Techniques de Commercialisation à Bordeaux (parcours marketing digital, e-business et entrepreneuriat) et en alternance à l’Office de Tourisme du Pays Tarusate, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’Université de Lima (Pérou) dans le cadre d’un Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI).</span>
                 <span class="lang-en hidden">Currently in my third year of a Bachelor's in Business and Marketing in Bordeaux (Digital Marketing, E-business and Entrepreneurship track) and doing a work-study program at the Pays Tarusate Tourist Office, I am preparing for a one-year university exchange at the University of Lima (Peru) as part of an International Technological University Diploma (DUETI).</span>
-                <span class="lang-es hidden">Actuellement en mi tercer año de Grado en Comercialización en Burdeos (especialidad en marketing digital, e-business y emprendimiento) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un Diploma Universitario de Estudios Tecnológicos Internacionales (DUETI).</span>
+                <span class="lang-es hidden">Actualmente en mi tercer año de Grado en Comercialización en Burdeos (especialidad en marketing digital, e-business y emprendimiento) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un Diploma Universitario de Estudios Tecnológicos Internacionales (DUETI).</span>
             </p>
             
-            <!-- School Partner Logos below Hero -->
-            <div class="flex justify-center items-center gap-8 mt-12 flex-wrap">
-                <img src="Universität_Bordeaux_Logo.svg.png" alt="Université de Bordeaux Logo" class="h-14 w-auto object-contain brightness-95 hover:brightness-100 transition" onerror="this.src='https://placehold.co/150x60/161F30/ffffff?text=U+Bordeaux'">
-                <img src="BM_TCOBX_RVB.webp" alt="IUT de Bordeaux Logo" class="h-14 w-auto object-contain brightness-95 hover:brightness-100 transition" onerror="this.src='https://placehold.co/150x60/161F30/ffffff?text=IUT+Bordeaux'">
+            <div class="flex flex-wrap justify-center gap-4 pt-8">
+                <a href="#contact" class="rounded-xl bg-brand-pin px-8 py-4 text-sm font-bold text-dark-base shadow-lg shadow-brand-pin/20 transition hover:scale-105">
+                    <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
+                </a>
+                <a href="#cv" class="rounded-xl border border-dark-border bg-dark-card/50 px-8 py-4 text-sm font-bold text-white transition hover:bg-dark-card">
+                    <span class="lang-fr">Voir mon CV</span><span class="lang-en hidden">View Resume</span><span class="lang-es hidden">Ver mi CV</span>
+                </a>
             </div>
 
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation">
@@ -175,10 +144,8 @@
         </div>
     </section>
 
-    <!-- Presentation Section (About) -->
     <section id="about" class="py-24 relative z-10 border-t border-dark-border/20">
         <div class="mx-auto max-w-7xl px-6">
-            
             <div class="mb-12">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
                     01 — <span class="lang-fr">Présentation</span><span class="lang-en hidden">About me</span><span class="lang-es hidden">Presentación</span>
@@ -191,16 +158,13 @@
             </div>
 
             <div class="grid gap-12 lg:grid-cols-12 items-center">
-                
-                <!-- Portrait Photo -->
                 <div class="lg:col-span-5 flex flex-col items-center gap-6">
                     <div class="relative w-64 h-80 sm:w-80 sm:h-96">
                         <div class="absolute -inset-2 rounded-3xl bg-gradient-to-r from-brand-pin to-brand-blue opacity-35 blur-xl"></div>
-                        <img class="relative rounded-3xl border border-dark-border/80 object-cover w-full h-full shadow-2xl" alt="Mathiam Taylor" src="IMG_4191.jpeg" onerror="this.src='https://placehold.co/320x380/161F30/ffffff?text=Mathiam+Taylor'">
+                        <img class="relative rounded-3xl border border-dark-border/80 object-cover w-full h-full shadow-2xl" alt="Mathiam Taylor" src="IMG_4191.jpeg">
                     </div>
                 </div>
 
-                <!-- Text Description -->
                 <div class="lg:col-span-7 space-y-6">
                     <p class="text-base leading-relaxed text-slate-300 sm:text-lg">
                         <span class="lang-fr">Mon parcours en BUT Techniques de Commercialisation m'a permis de développer une grande polyvalence dans différents domaines tels que le marketing, la vente, la négociation ou encore la conduite de projets digitaux. Ce qui m’anime dans ma vie professionnelle, c'est la diversité des missions qui me sont confiées. J’aime mettre à profit mes compétences variées, allant de la vente ou de la négociation à la création de supports digitaux.</span>
@@ -210,17 +174,15 @@
                     <p class="text-base leading-relaxed text-slate-400">
                         <span class="lang-fr">Curieux et tourné vers le marketing et la gestion de projet, j'aime découvrir de nouvelles méthodes de travail et de nouveaux environnements. Cet état d’esprit s'est directement traduit à travers mes expériences : d’un stage en tant que conseiller chez Sport 2000 à mon poste de responsable marketing et communication à l’Office de Tourisme du Pays Tarusate, en passant par un stage en Allemagne en tant que chargé de communication dans un club sportif.</span>
                         <span class="lang-en hidden">Curious and oriented towards marketing and project management, I love discovering new working methods and environments. This mindset is directly reflected through my experiences: from an internship as a sales advisor at Sport 2000 to my role as marketing and communications manager at the Pays Tarusate Tourist Office, as well as an internship in Germany as a communications officer for a sports club.</span>
-                        <span class="lang-es hidden">Curioso y orientado hacia el marketing y la gestión de proyectos, me encanta descubrir nuevos métodos de trabajo y entornos. Esta mentalidad se refleja directamente a través de mis experiencias: desde unas prácticas como asesor en Sport 2000 hasta mi puesto de responsable de marketing et comunicación en la Oficina de Turismo del Pays Tarusate, pasando por unas prácticas en Alemania como encargado de comunicación en un club deportivo.</span>
+                        <span class="lang-es hidden">Curioso y orientado hacia el marketing y la gestión de proyectos, me encanta descubrir nuevos métodos de trabajo y entornos. Esta mentalidad se refleja directamente a través de mis experiencias: desde unas prácticas como asesor en Sport 2000 hasta mi puesto de responsable de marketing y comunicación en la Oficina de Turismo del Pays Tarusate, pasando por unas prácticas en Alemania como encargado de comunicación en un club deportivo.</span>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="competences" class="py-24 relative z-10 border-t border-dark-border/20 bg-dark-card/10">
         <div class="mx-auto max-w-7xl px-6">
-            
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
                     <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
@@ -230,7 +192,6 @@
                         <span class="lang-fr">Ce que je sais faire</span><span class="lang-en hidden">What I can do</span><span class="lang-es hidden">Lo que sé hacer</span>
                     </h2>
                 </div>
-                <!-- Interactive Tabs -->
                 <div class="flex flex-wrap gap-2">
                     <button onclick="switchTab('tab-a')" id="btn-tab-a" class="tab-btn active px-4 py-2 rounded-xl text-xs font-bold border border-brand-pin bg-brand-pin/15 text-brand-pin transition">
                         <span class="lang-fr">Actions marketing</span><span class="lang-en hidden">Marketing Actions</span><span class="lang-es hidden">Acciones de marketing</span>
@@ -250,7 +211,6 @@
                 </div>
             </div>
             
-            <!-- BLOC A : MARKETING -->
             <div id="tab-a" class="tab-content grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
@@ -269,7 +229,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
@@ -287,7 +246,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
@@ -307,7 +265,6 @@
                 </div>
             </div>
 
-            <!-- BLOC B : COMMUNICATION -->
             <div id="tab-b" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
@@ -326,7 +283,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
@@ -344,7 +300,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
@@ -364,7 +319,6 @@
                 </div>
             </div>
 
-            <!-- BLOC C : VENTE ET CONSEIL -->
             <div id="tab-c" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
@@ -383,7 +337,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
@@ -401,7 +354,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
@@ -421,12 +373,11 @@
                 </div>
             </div>
 
-            <!-- BLOC D : GESTION DE PROJET -->
             <div id="tab-d" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Tableaux de bord et suivi</span><span class="lang-en hidden">Dashboards & Tracking</span><span class="lang-es hidden">Cuadros de mando y suivi</span>
+                            <span class="lang-fr">Tableaux de bord et suivi</span><span class="lang-en hidden">Dashboards & Tracking</span><span class="lang-es hidden">Cuadros de mando y seguimiento</span>
                         </h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
                             <span class="lang-fr">Création d'outils automatisés sur tableur pour faciliter la lecture des données.</span>
@@ -442,7 +393,6 @@
                 </div>
             </div>
 
-            <!-- BLOC E : LANGUES (NEW) -->
             <div id="tab-e" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold text-white mb-2">
@@ -454,7 +404,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold text-white mb-2">
                         <span class="lang-fr">Anglais</span><span class="lang-en hidden">English</span><span class="lang-es hidden">Inglés</span>
@@ -468,7 +417,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="glass-card flex flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold text-white mb-2">
                         <span class="lang-fr">Espagnol</span><span class="lang-en hidden">Spanish</span><span class="lang-es hidden">Español</span>
@@ -478,19 +426,16 @@
                             <span class="lang-fr">Usage opérationnel</span><span class="lang-en hidden">Operational usage</span><span class="lang-es hidden">Uso operativo</span>
                         </p>
                         <p class="text-xs text-slate-400 mt-2">
-                            <span class="lang-fr">Pratiqué au cours de différents voyages.</span><span class="lang-en hidden">Practiced during various travels.</span><span class="lang-es hidden">Praticado durante varios viajes.</span>
+                            <span class="lang-fr">Pratiqué au cours de différents voyages.</span><span class="lang-en hidden">Practiced during various travels.</span><span class="lang-es hidden">Practicado durante varios viajes.</span>
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experiences" class="py-24 relative z-10 border-t border-dark-border/20">
         <div class="mx-auto max-w-5xl px-6">
-            
             <div class="mb-16 text-center">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
                     03 — <span class="lang-fr">Mon parcours</span><span class="lang-en hidden">Background</span><span class="lang-es hidden">Mi trayectoria</span>
@@ -500,130 +445,104 @@
                 </h2>
             </div>
 
-            <!-- Vertical Timeline with logos -->
             <div class="relative border-l-2 border-dark-border/60 ml-4 md:ml-32 space-y-12">
-                
-                <!-- Office de tourisme -->
                 <div class="relative pl-6 md:pl-8">
                     <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-brand-pin border-4 border-dark-base shadow-lg shadow-brand-pin/40"></span>
                     <div class="md:absolute md:-left-36 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Déc. 2025 -<br>Août 2026</span><span class="lang-en hidden">Dec 2025 -<br>Aug 2026</span><span class="lang-es hidden">Dic 2025 -<br>Ago 2026</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div class="space-y-1">
-                            <h3 class="text-base font-extrabold text-white">
-                                <span class="lang-fr">Responsable Communication et Marketing (Alternance)</span>
-                                <span class="lang-en hidden">Communication and Marketing Manager (Work-study)</span>
-                                <span class="lang-es hidden">Responsable de Comunicación y Marketing (Alternancia)</span>
-                            </h3>
-                            <p class="text-xs text-brand-pin">Office de Tourisme du Pays Tarusate — Tartas</p>
-                            <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
-                                <li><span class="lang-fr">Construction et mise en œuvre du plan de communication du territoire.</span><span class="lang-en hidden">Construction and implementation of the communication plan.</span><span class="lang-es hidden">Construcción e implementación del plan de comunicación.</span></li>
-                                <li><span class="lang-fr">Réalisation d’un mémoire universitaire sur l’influence des réseaux sociaux sur le tourisme landais.</span><span class="lang-en hidden">Writing a university thesis on the influence of social networks on tourism in the Landes region.</span><span class="lang-es hidden">Redacción de una tesina universitaria sobre la influencia de las redes sociales en el turismo de las Landas.</span></li>
-                                <li><span class="lang-fr">Missions variées (accueil, événementiel, gestion de projet globale).</span><span class="lang-en hidden">Various missions (reception, events, overall project management).</span><span class="lang-es hidden">Diversas misiones (recepción, eventos, gestión global de proyectos).</span></li>
-                            </ul>
-                        </div>
-                        <img src="logo-OTPT-bois.png" alt="Office de Tourisme Logo" class="h-14 w-auto object-contain rounded-xl bg-white/5 p-1 border border-dark-border" onerror="this.src='https://placehold.co/80x80/161F30/ffffff?text=OT'">
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="text-base font-extrabold text-white">
+                            <span class="lang-fr">Responsable Communication et Marketing (Alternance)</span>
+                            <span class="lang-en hidden">Communication and Marketing Manager (Work-study)</span>
+                            <span class="lang-es hidden">Responsable de Comunicación y Marketing (Alternancia)</span>
+                        </h3>
+                        <p class="text-xs text-brand-pin mt-1">Office de Tourisme du Pays Tarusate — Tartas</p>
+                        <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
+                            <li><span class="lang-fr">Construction et mise en œuvre du plan de communication du territoire.</span><span class="lang-en hidden">Construction and implementation of the communication plan.</span><span class="lang-es hidden">Construcción e implementación del plan de comunicación.</span></li>
+                            <li><span class="lang-fr">Réalisation d’un mémoire universitaire sur l’influence des réseaux sociaux sur le tourisme landais.</span><span class="lang-en hidden">Writing a university thesis on the influence of social networks on tourism in the Landes region.</span><span class="lang-es hidden">Redacción de una tesina universitaria sobre la influencia de las redes sociales en el turismo de las Landas.</span></li>
+                            <li><span class="lang-fr">Missions variées (accueil, événementiel, gestion de projet globale).</span><span class="lang-en hidden">Various missions (reception, events, overall project management).</span><span class="lang-es hidden">Diversas misiones (recepción, eventos, gestión global de proyectos).</span></li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Crédit Agricole -->
                 <div class="relative pl-6 md:pl-8">
                     <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#cbd5e1] border-4 border-dark-base"></span>
                     <div class="md:absolute md:-left-36 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Juil. 2024 &<br>Juil. 2025</span><span class="lang-en hidden">Jul 2024 &<br>Jul 2025</span><span class="lang-es hidden">Jul 2024 y<br>Jul 2025</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div class="space-y-1">
-                            <h3 class="text-base font-extrabold text-white">
-                                <span class="lang-fr">Chargé d'accueil (CDD)</span><span class="lang-en hidden">Receptionist (Fixed-term)</span><span class="lang-es hidden">Gestor de Atención al Cliente (Contrato)</span>
-                            </h3>
-                            <p class="text-xs text-brand-blue">Crédit Agricole — Saint-Paul-lès-Dax</p>
-                            <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
-                                <li><span class="lang-fr">Travail en équipe.</span><span class="lang-en hidden">Teamwork.</span><span class="lang-es hidden">Trabajo en equipo.</span></li>
-                                <li><span class="lang-fr">Accueil quotidien et analyse des besoins des clients.</span><span class="lang-en hidden">Daily reception and analysis of customer needs.</span><span class="lang-es hidden">Atención diaria y análisis de las necesidades del cliente.</span></li>
-                                <li><span class="lang-fr">Traitement des opérations courantes (virements, retraits).</span><span class="lang-en hidden">Processing of routine operations (transfers, withdrawals).</span><span class="lang-es hidden">Tratamiento de operaciones corrientes (transferencias, reintegros).</span></li>
-                            </ul>
-                        </div>
-                        <img src="ca-Aquitaine-v-RVB-300x259.png" alt="Crédit Agricole Logo" class="h-14 w-auto object-contain rounded-xl bg-white/5 p-1 border border-dark-border" onerror="this.src='https://placehold.co/80x80/161F30/ffffff?text=CA'">
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="text-base font-extrabold text-white">
+                            <span class="lang-fr">Chargé d'accueil (CDD)</span><span class="lang-en hidden">Receptionist (Fixed-term)</span><span class="lang-es hidden">Gestor de Atención al Cliente (Contrato)</span>
+                        </h3>
+                        <p class="text-xs text-brand-blue mt-1">Crédit Agricole — Saint-Paul-lès-Dax</p>
+                        <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
+                            <li><span class="lang-fr">Travail en équipe.</span><span class="lang-en hidden">Teamwork.</span><span class="lang-es hidden">Trabajo en equipo.</span></li>
+                            <li><span class="lang-fr">Accueil quotidien et analyse des besoins des clients.</span><span class="lang-en hidden">Daily reception and analysis of customer needs.</span><span class="lang-es hidden">Atención diaria y análisis de las necesidades del cliente.</span></li>
+                            <li><span class="lang-fr">Traitement des opérations courantes (virements, retraits).</span><span class="lang-en hidden">Processing of routine operations (transfers, withdrawals).</span><span class="lang-es hidden">Tratamiento de operaciones corrientes (transferencias, reintegros).</span></li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Thermes de Saubusse -->
                 <div class="relative pl-6 md:pl-8">
                     <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#cbd5e1] border-4 border-dark-base"></span>
                     <div class="md:absolute md:-left-36 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Janv. - Févr.<br>2025</span><span class="lang-en hidden">Jan - Feb<br>2025</span><span class="lang-es hidden">Ene - Feb<br>2025</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div class="space-y-1">
-                            <h3 class="text-base font-extrabold text-white">
-                                <span class="lang-fr">Responsable Marketing Digital (Stage)</span><span class="lang-en hidden">Digital Marketing Manager (Internship)</span><span class="lang-es hidden">Responsable de Marketing Digital (Prácticas)</span>
-                            </h3>
-                            <p class="text-xs text-brand-pin">Les Thermes de Saubusse — Saubusse</p>
-                            <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
-                                <li><span class="lang-fr">Audit complet de l'écosystème numérique.</span><span class="lang-en hidden">Comprehensive audit of the digital ecosystem.</span><span class="lang-es hidden">Auditoría completa del ecosistema digital.</span></li>
-                                <li><span class="lang-fr">Étude comparative de solutions d'Intelligence Artificielle.</span><span class="lang-en hidden">Comparative study of AI solutions.</span><span class="lang-es hidden">Estudio comparativo de soluciones de IA.</span></li>
-                                <li><span class="lang-fr">Conception de tableaux de bord Excel automatisés.</span><span class="lang-en hidden">Design of automated Excel dashboards.</span><span class="lang-es hidden">Design of automated Excel dashboards.</span></li>
-                            </ul>
-                        </div>
-                        <img src="Logo_full_degradepaddle 1922.webp" alt="Thermes de Saubusse Logo" class="h-14 w-auto object-contain rounded-xl bg-white/5 p-1 border border-dark-border" onerror="this.src='https://placehold.co/80x80/161F30/ffffff?text=Saubusse'">
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="text-base font-extrabold text-white">
+                            <span class="lang-fr">Responsable Marketing Digital (Stage)</span><span class="lang-en hidden">Digital Marketing Manager (Internship)</span><span class="lang-es hidden">Responsable de Marketing Digital (Prácticas)</span>
+                        </h3>
+                        <p class="text-xs text-brand-pin mt-1">Les Thermes de Saubusse — Saubusse</p>
+                        <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
+                            <li><span class="lang-fr">Audit complet de l'écosystème numérique.</span><span class="lang-en hidden">Comprehensive audit of the digital ecosystem.</span><span class="lang-es hidden">Auditoría completa del ecosistema digital.</span></li>
+                            <li><span class="lang-fr">Étude comparative de solutions d'Intelligence Artificielle.</span><span class="lang-en hidden">Comparative study of AI solutions.</span><span class="lang-es hidden">Estudio comparativo de soluciones de IA.</span></li>
+                            <li><span class="lang-fr">Conception de tableaux de bord Excel automatisés.</span><span class="lang-en hidden">Design of automated Excel dashboards.</span><span class="lang-es hidden">Diseño de cuadros de mando Excel automatizados.</span></li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Allemagne -->
                 <div class="relative pl-6 md:pl-8">
                     <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#cbd5e1] border-4 border-dark-base"></span>
                     <div class="md:absolute md:-left-36 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Janv. - Févr.<br>2025</span><span class="lang-en hidden">Jan - Feb<br>2025</span><span class="lang-es hidden">Ene - Feb<br>2025</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div class="space-y-1">
-                            <h3 class="text-base font-extrabold text-white">
-                                <span class="lang-fr">Chargé de Communication (Stage)</span><span class="lang-en hidden">Communications Officer (Internship)</span><span class="lang-es hidden">Responsable de Comunicación (Prácticas)</span>
-                            </h3>
-                            <p class="text-xs text-brand-blue">BSC Unna — Unna (Allemagne / Germany / Alemania)</p>
-                            <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
-                                <li><span class="lang-fr">Construction d'un plan de communication.</span><span class="lang-en hidden">Development of a communication plan.</span><span class="lang-es hidden">Construcción de un plan de comunicación.</span></li>
-                                <li><span class="lang-fr">Création de contenu pour les réseaux sociaux.</span><span class="lang-en hidden">Creation of content for social networks.</span><span class="lang-es hidden">Creación de contenido para redes sociales.</span></li>
-                                <li><span class="lang-fr">Réalisation d'une veille concurrentielle.</span><span class="lang-en hidden">Conducting a competitive watch.</span><span class="lang-es hidden">Realización de vigilancia competitiva.</span></li>
-                            </ul>
-                        </div>
-                        <img src="images.jpeg" alt="BSC Unna Logo" class="h-14 w-auto object-contain rounded-xl bg-white/5 p-1 border border-dark-border" onerror="this.src='https://placehold.co/80x80/161F30/ffffff?text=BSC+Unna'">
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="text-base font-extrabold text-white">
+                            <span class="lang-fr">Chargé de Communication (Stage)</span><span class="lang-en hidden">Communications Officer (Internship)</span><span class="lang-es hidden">Responsable de Comunicación (Prácticas)</span>
+                        </h3>
+                        <p class="text-xs text-brand-blue mt-1">BSC Unna — Unna (Allemagne / Germany / Alemania)</p>
+                        <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
+                            <li><span class="lang-fr">Construction d'un plan de communication.</span><span class="lang-en hidden">Development of a communication plan.</span><span class="lang-es hidden">Construcción de un plan de comunicación.</span></li>
+                            <li><span class="lang-fr">Création de contenu pour les réseaux sociaux.</span><span class="lang-en hidden">Creation of content for social networks.</span><span class="lang-es hidden">Creación de contenido para redes sociales.</span></li>
+                            <li><span class="lang-fr">Réalisation d'une veille concurrentielle.</span><span class="lang-en hidden">Conducting a competitive watch.</span><span class="lang-es hidden">Realización de vigilancia competitiva.</span></li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Sport 2000 -->
                 <div class="relative pl-6 md:pl-8">
                     <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#cbd5e1] border-4 border-dark-base"></span>
                     <div class="md:absolute md:-left-36 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
                         <span class="lang-fr">Janv. 2024</span><span class="lang-en hidden">Jan 2024</span><span class="lang-es hidden">Ene 2024</span>
                     </div>
-                    <div class="glass-card rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div class="space-y-1">
-                            <h3 class="text-base font-extrabold text-white">
-                                <span class="lang-fr">Conseiller de vente (Stage)</span><span class="lang-en hidden">Sales Assistant (Internship)</span><span class="lang-es hidden">Asesor de Ventas (Prácticas)</span>
-                            </h3>
-                            <p class="text-xs text-brand-pin">SPORT 2000 — Dax</p>
-                            <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
-                                <li><span class="lang-fr">Accueil et accompagnement de la clientèle en magasin.</span><span class="lang-en hidden">Welcoming and assisting customers in-store.</span><span class="lang-es hidden">Atención y acompañamiento de clientes en tienda.</span></li>
-                                <li><span class="lang-fr">Analyse des besoins et proposition de solutions adaptées.</span><span class="lang-en hidden">Analyzing needs and proposing suitable solutions.</span><span class="lang-es hidden">Análisis de necesidades y propuesta de soluciones.</span></li>
-                                <li><span class="lang-fr">Participation aux actions de merchandising.</span><span class="lang-en hidden">Participation in merchandising actions.</span><span class="lang-es hidden">Participación en acciones de merchandising.</span></li>
-                            </ul>
-                        </div>
-                        <img src="SPORT_2000_NEW.svg.png" alt="Sport 2000 Logo" class="h-14 w-auto object-contain rounded-xl bg-white/5 p-1 border border-dark-border" onerror="this.src='https://placehold.co/80x80/161F30/ffffff?text=Sport2000'">
+                    <div class="glass-card rounded-2xl p-6">
+                        <h3 class="text-base font-extrabold text-white">
+                            <span class="lang-fr">Conseiller de vente (Stage)</span><span class="lang-en hidden">Sales Assistant (Internship)</span><span class="lang-es hidden">Asesor de Ventas (Prácticas)</span>
+                        </h3>
+                        <p class="text-xs text-brand-pin mt-1">SPORT 2000 — Dax</p>
+                        <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
+                            <li><span class="lang-fr">Accueil et accompagnement de la clientèle en magasin.</span><span class="lang-en hidden">Welcoming and assisting customers in-store.</span><span class="lang-es hidden">Atención y acompañamiento de clientes en tienda.</span></li>
+                            <li><span class="lang-fr">Analyse des besoins et proposition de solutions adaptées.</span><span class="lang-en hidden">Analyzing needs and proposing suitable solutions.</span><span class="lang-es hidden">Análisis de necesidades y propuesta de soluciones.</span></li>
+                            <li><span class="lang-fr">Participation aux actions de merchandising.</span><span class="lang-en hidden">Participation in merchandising actions.</span><span class="lang-es hidden">Participación en acciones de merchandising.</span></li>
+                        </ul>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="formation" class="py-24 relative z-10 border-t border-dark-border/20 bg-dark-card/5">
         <div class="mx-auto max-w-5xl px-6">
-            
             <div class="mb-16 text-center">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-blue">
                     <span class="lang-fr">Formation</span><span class="lang-en hidden">Education</span><span class="lang-es hidden">Formación</span>
@@ -634,19 +553,18 @@
             </div>
 
             <div class="grid gap-8 md:grid-cols-2">
-                <!-- BUT TC -->
                 <div class="rounded-2xl border border-dark-border bg-dark-base p-8 shadow-sm flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue/15 text-brand-blue"><i class="fa-solid fa-graduation-cap"></i></div>
                             <span class="text-xs font-black uppercase tracking-widest text-slate-500">2023 - 2026</span>
-                            <img src="BM_TCOBX_RVB.webp" alt="IUT Bordeaux Logo" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/80x40/161F30/ffffff?text=IUT'">
                         </div>
-                        <h3 class="text-lg font-extrabold text-white">
+                        <h3 class="text-lg font-extrabold text-white mb-2">
                             <span class="lang-fr">BUT Techniques de Commercialisation</span>
                             <span class="lang-en hidden">Bachelor in Business and Marketing</span>
                             <span class="lang-es hidden">Grado en Técnicas de Comercialización</span>
                         </h3>
-                        <p class="text-sm font-bold text-brand-blue">IUT de Bordeaux</p>
+                        <p class="text-sm font-bold text-brand-blue mb-4">IUT de Bordeaux</p>
                         <p class="text-xs text-slate-400 leading-relaxed">
                             <span class="lang-fr">Parcours Marketing Digital, E-Business et Entrepreneuriat.</span>
                             <span class="lang-en hidden">Track: Digital Marketing, E-Business, and Entrepreneurship.</span>
@@ -655,19 +573,18 @@
                     </div>
                 </div>
 
-                <!-- Lycée de Borda -->
                 <div class="rounded-2xl border border-dark-border bg-dark-base p-8 shadow-sm flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-700/30 text-slate-400"><i class="fa-solid fa-school"></i></div>
                             <span class="text-xs font-black uppercase tracking-widest text-slate-500">2020 - 2023</span>
-                            <img src="Logo_Borda_generique_rvb-e1686843860253.png" alt="Lycée de Borda Logo" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/80x40/161F30/ffffff?text=Borda'">
                         </div>
-                        <h3 class="text-lg font-extrabold text-white">
+                        <h3 class="text-lg font-extrabold text-white mb-2">
                             <span class="lang-fr">Baccalauréat Technologique STMG</span>
                             <span class="lang-en hidden">High School Diploma (Management)</span>
                             <span class="lang-es hidden">Bachillerato Tecnológico (Gestión)</span>
                         </h3>
-                        <p class="text-sm font-bold text-slate-300">Lycée de Borda — Dax</p>
+                        <p class="text-sm font-bold text-slate-300 mb-4">Lycée de Borda — Dax</p>
                         <p class="text-xs text-slate-400 leading-relaxed">
                             <span class="lang-fr">Spécialité Marketing — Mention Bien.</span>
                             <span class="lang-en hidden">Marketing Specialization — Graduated with Honors.</span>
@@ -679,10 +596,8 @@
         </div>
     </section>
 
-    <!-- Interests Section -->
     <section id="interets" class="py-24 relative z-10 border-t border-dark-border/20 bg-dark-card/10">
         <div class="mx-auto max-w-7xl px-6">
-            
             <div class="mb-16 text-center">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-ochre">
                     04 — <span class="lang-fr">Centres d'intérêt</span><span class="lang-en hidden">Interests</span><span class="lang-es hidden">Intereses</span>
@@ -693,79 +608,63 @@
             </div>
 
             <div class="grid gap-8 md:grid-cols-2">
-                
-                <!-- Sport Card with actual photo -->
-                <div class="rounded-2xl border border-dark-border/80 bg-gradient-to-br from-dark-card to-dark-base p-8 shadow-sm space-y-6 flex flex-col justify-between">
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-ochre/15 text-brand-ochre">
-                                <i class="fa-solid fa-fire text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-extrabold text-white">
-                                    <span class="lang-fr">Sport et dépassement de soi</span><span class="lang-en hidden">Sports and Personal growth</span><span class="lang-es hidden">Deporte y Superación personal</span>
-                                </h3>
-                            </div>
+                <!-- Sport -->
+                <div class="rounded-2xl border border-dark-border/80 bg-gradient-to-br from-dark-card to-dark-base p-8 shadow-sm space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-ochre/15 text-brand-ochre">
+                            <i class="fa-solid fa-fire text-xl"></i>
                         </div>
-
-                        <div class="flex flex-wrap gap-2">
-                            <span class="rounded-full bg-dark-base border border-dark-border text-slate-300 text-xs px-4 py-1.5"><i class="fa-solid fa-shuttlecock text-brand-ochre mr-1"></i> Badminton (National 2)</span>
-                            <span class="rounded-full bg-dark-base border border-dark-border text-slate-300 text-xs px-4 py-1.5"><i class="fa-solid fa-person-running text-brand-ochre mr-1"></i> Marathon</span>
-                            <span class="rounded-full bg-dark-base border border-dark-border text-slate-300 text-xs px-4 py-1.5"><i class="fa-solid fa-stopwatch text-brand-ochre mr-1"></i> Hyrox</span>
+                        <div>
+                            <h3 class="text-lg font-extrabold text-white">
+                                <span class="lang-fr">Sport et dépassement de soi</span><span class="lang-en hidden">Sports and Personal growth</span><span class="lang-es hidden">Deporte y Superación personal</span>
+                            </h3>
                         </div>
+                    </div>
 
-                        <p class="text-sm leading-relaxed text-slate-400">
-                            <span class="lang-fr">La pratique du sport en compétition et la participation à des épreuves d'endurance ont forgé ma persévérance, mon ambition et une grande rigueur. Ce sont des qualités que je transpose quotidiennement dans mes missions professionnelles.</span>
-                            <span class="lang-en hidden">Practicing competitive sports and participating in endurance events have forged my perseverance, ambition, and strong discipline. These are qualities I apply daily in my professional missions.</span>
-                            <span class="lang-es hidden">La práctica deportiva de competición y la participación en pruebas de resistencia han forjado mi perseverancia, mi ambición y un gran rigor. Son cualidades que aplico a diario en mis misiones profesionales.</span>
-                        </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-full bg-dark-base border border-dark-border text-slate-300 text-xs px-4 py-1.5"><i class="fa-solid fa-shuttlecock text-brand-ochre mr-1"></i> Badminton (National 2)</span>
+                        <span class="rounded-full bg-dark-base border border-dark-border text-slate-300 text-xs px-4 py-1.5"><i class="fa-solid fa-person-running text-brand-ochre mr-1"></i> Marathon</span>
+                        <span class="rounded-full bg-dark-base border border-dark-border text-slate-300 text-xs px-4 py-1.5"><i class="fa-solid fa-stopwatch text-brand-ochre mr-1"></i> Hyrox</span>
                     </div>
-                    
-                    <div class="mt-4 overflow-hidden rounded-xl h-56 border border-dark-border">
-                        <img src="IMG_9384.jpeg" alt="Activités Sportives Mathiam" class="w-full h-full object-cover brightness-90 hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x250/161F30/ffffff?text=Sport'">
-                    </div>
+
+                    <p class="text-sm leading-relaxed text-slate-400">
+                        <span class="lang-fr">La pratique du sport en compétition et la participation à des épreuves d'endurance ont forgé ma persévérance, mon ambition et une grande rigueur. Ce sont des qualités que je transpose quotidiennement dans mes missions professionnelles.</span>
+                        <span class="lang-en hidden">Practicing competitive sports and participating in endurance events have forged my perseverance, ambition, and strong discipline. These are qualities I apply daily in my professional missions.</span>
+                        <span class="lang-es hidden">La práctica deportiva de competición y la participación en pruebas de resistencia han forjado mi perseverancia, mi ambición y un gran rigor. Son cualidades que aplico a diario en mis misiones profesionales.</span>
+                    </p>
                 </div>
 
-                <!-- Voyages Card with actual photo -->
-                <div class="rounded-2xl border border-dark-border/80 bg-gradient-to-br from-dark-card to-dark-base p-8 shadow-sm space-y-6 flex flex-col justify-between">
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-blue/15 text-brand-blue">
-                                <i class="fa-solid fa-earth-americas text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-extrabold text-white">
-                                    <span class="lang-fr">Voyages et ouverture culturelle</span><span class="lang-en hidden">Travel and Cultural openness</span><span class="lang-es hidden">Viajes y Apertura cultural</span>
-                                </h3>
-                            </div>
+                <!-- Voyages -->
+                <div class="rounded-2xl border border-dark-border/80 bg-gradient-to-br from-dark-card to-dark-base p-8 shadow-sm space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-blue/15 text-brand-blue">
+                            <i class="fa-solid fa-earth-americas text-xl"></i>
                         </div>
-
-                        <div class="flex flex-wrap gap-2 text-xs text-slate-300 leading-relaxed p-3 rounded-xl bg-dark-base border border-dark-border">
-                            <span class="lang-fr">États-Unis, Angleterre, Espagne, Italie, Pays-Bas, Suède, Albanie, Côte d'Ivoire, Inde...</span>
-                            <span class="lang-en hidden">United States, England, Spain, Italy, Netherlands, Sweden, Albania, Ivory Coast, India...</span>
-                            <span class="lang-es hidden">Estados Unidos, Inglaterra, España, Italia, Países Bajos, Suecia, Albania, Costa de Marfil, India...</span>
+                        <div>
+                            <h3 class="text-lg font-extrabold text-white">
+                                <span class="lang-fr">Voyages et ouverture culturelle</span><span class="lang-en hidden">Travel and Cultural openness</span><span class="lang-es hidden">Viajes y Apertura cultural</span>
+                            </h3>
                         </div>
-
-                        <p class="text-sm leading-relaxed text-slate-400">
-                            <span class="lang-fr">Découvrir ces différents pays a forgé ma curiosité et ma grande capacité d'adaptation. Ces immersions régulières m'ont permis de pratiquer les langues étrangères en conditions réelles et de développer une véritable aisance pour aller vers les autres.</span>
-                            <span class="lang-en hidden">Discovering these countries has shaped my curiosity and adaptability. These regular immersions allowed me to practice foreign languages in real conditions and develop a genuine ease in connecting with others.</span>
-                            <span class="lang-es hidden">Descubrir estos países ha forjado mi curiosidad y mi gran capacidad de adaptación. Estas inmersiones regulares me han permitido practicar idiomas en condiciones reales y desarrollar una verdadera facilidad para relacionarme con los demás.</span>
-                        </p>
                     </div>
 
-                    <div class="mt-4 overflow-hidden rounded-xl h-56 border border-dark-border">
-                        <img src="IMG_7983.HEIC" alt="Voyages Mathiam" class="w-full h-full object-cover brightness-90 hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x250/161F30/ffffff?text=Voyages'">
+                    <div class="flex flex-wrap gap-2 text-xs text-slate-300 leading-relaxed p-3 rounded-xl bg-dark-base border border-dark-border">
+                        <span class="lang-fr">États-Unis, Angleterre, Espagne, Italie, Pays-Bas, Suède, Albanie, Côte d'Ivoire, Inde...</span>
+                        <span class="lang-en hidden">United States, England, Spain, Italy, Netherlands, Sweden, Albania, Ivory Coast, India...</span>
+                        <span class="lang-es hidden">Estados Unidos, Inglaterra, España, Italia, Países Bajos, Suecia, Albania, Costa de Marfil, India...</span>
                     </div>
+
+                    <p class="text-sm leading-relaxed text-slate-400">
+                        <span class="lang-fr">Découvrir ces différents pays a forgé ma curiosité et ma grande capacité d'adaptation. Ces immersions régulières m'ont permis de pratiquer les langues étrangères en conditions réelles et de développer une véritable aisance pour aller vers les autres.</span>
+                        <span class="lang-en hidden">Discovering these countries has shaped my curiosity and adaptability. These regular immersions allowed me to practice foreign languages in real conditions and develop a genuine ease in connecting with others.</span>
+                        <span class="lang-es hidden">Descubrir estos países ha forjado mi curiosidad y mi gran capacidad de adaptación. Estas inmersiones regulares me han permitido practicar idiomas en condiciones reales y desarrollar una verdadera facilidad para relacionarme con los demás.</span>
+                    </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Career Plan Section -->
     <section id="projet-pro" class="py-24 relative z-10 border-t border-dark-border/20">
         <div class="mx-auto max-w-7xl px-6">
-            
             <div class="mb-16 text-center">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
                     05 — <span class="lang-fr">Mes objectifs</span><span class="lang-en hidden">My goals</span><span class="lang-es hidden">Mis objetivos</span>
@@ -776,8 +675,6 @@
             </div>
 
             <div class="grid gap-12 lg:grid-cols-12 items-center">
-                
-                <!-- Left side: DUETI + Thesis details -->
                 <div class="lg:col-span-6 space-y-6">
                     <div class="rounded-xl border border-dark-border bg-dark-card/30 p-5 space-y-2">
                         <p class="text-xs font-bold text-brand-pin"><i class="fa-solid fa-plane-departure mr-2"></i>
@@ -790,22 +687,18 @@
                         </p>
                     </div>
 
-                    <div class="border-l-2 border-brand-blue pl-4 py-1">
+                    <div class="mt-4 border-l-2 border-brand-blue pl-4 py-1">
                         <p class="text-[11px] text-brand-blue font-bold uppercase tracking-wider mb-1">
-                            <span class="lang-fr">Sujet de mémoire</span><span class="lang-en hidden">Thesis Subject</span><span class="lang-es hidden">Tema de tesina</span>
+                            <span class="lang-fr">Sujet de Mémoire (BUT)</span><span class="lang-en hidden">Thesis Subject (Bachelor)</span><span class="lang-es hidden">Tema de Tesina (Grado)</span>
                         </p>
                         <p class="text-xs text-slate-300 italic">
-                            « <span class="lang-fr">Le marketing digital comme levier de rééquilibrage des flux touristiques</span><span class="lang-en hidden">Digital marketing as a lever to rebalance tourist flows</span><span class="lang-es hidden">El marketing digital como palanca para reequilibrar los flujos turísticos</span> »
+                            <span class="lang-fr">« Le marketing digital comme levier de rééquilibrage des flux touristiques »</span>
+                            <span class="lang-en hidden">"Digital marketing as a lever to rebalance tourist flows"</span>
+                            <span class="lang-es hidden">"El marketing digital como palanca para reequilibrar los flujos turísticos"</span>
                         </p>
-                    </div>
-
-                    <!-- Thesis Cover Image -->
-                    <div class="rounded-xl overflow-hidden border border-dark-border h-48">
-                        <img src="1.png" alt="Couverture de Mémoire" class="w-full h-full object-cover brightness-95" onerror="this.src='https://placehold.co/400x150/161F30/ffffff?text=Memoire+BUT'">
                     </div>
                 </div>
 
-                <!-- Right side: Objectives -->
                 <div class="lg:col-span-6 space-y-4">
                     <div class="flex gap-4">
                         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-pin text-dark-base font-extrabold text-sm">1</div>
@@ -835,15 +728,12 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Resume Display Section -->
     <section id="cv" class="py-24 relative z-10 border-t border-dark-border/20 bg-dark-card/5">
         <div class="mx-auto max-w-7xl px-6">
-            
             <div class="flex flex-col items-center text-center space-y-4 mb-12">
                 <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
                     06 — <span class="lang-fr">Mon parcours en une page</span><span class="lang-en hidden">My background in one page</span><span class="lang-es hidden">Mi trayectoria en una página</span>
@@ -851,106 +741,86 @@
                 <h2 class="text-3xl font-black text-white sm:text-4xl">
                     <span class="lang-fr">Mon CV</span><span class="lang-en hidden">My Resume</span><span class="lang-es hidden">Mi CV</span>
                 </h2>
-                <!-- PDF Download Link - dynamically resolved via JS based on selected language -->
                 <a id="cv-download-btn" href="cv-fr.pdf" download class="inline-flex items-center gap-2 rounded-xl border border-brand-pin/40 bg-brand-pin/10 px-6 py-3 text-xs font-bold text-brand-pin transition hover:bg-brand-pin hover:text-dark-base">
                     <i class="fa-solid fa-download"></i> 
                     <span class="lang-fr">Télécharger le document PDF</span><span class="lang-en hidden">Download PDF document</span><span class="lang-es hidden">Descargar documento PDF</span>
                 </a>
             </div>
 
-            <!-- PDF Screenshot Visual Display -->
             <div class="mx-auto max-w-4xl rounded-2xl overflow-hidden border border-dark-border shadow-2xl">
-                <img id="cv-img-display" src="Capture d’écran 2026-06-13 à 15.48.32.png" alt="CV Mathiam Taylor" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/800x1100/161F30/ffffff?text=CV+Mathiam+Taylor'">
+                <img id="cv-img-display" src="Capture d’écran 2026-06-13 à 15.48.32.png" alt="CV Mathiam Taylor" class="w-full h-auto object-cover">
             </div>
-
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-24 relative z-10 border-t border-dark-border/20">
-        <div class="mx-auto max-w-4xl px-6">
-            <div class="text-center space-y-6 max-w-2xl mx-auto">
-                <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
-                    07 — <span class="lang-fr">Échangeons</span><span class="lang-en hidden">Let's talk</span><span class="lang-es hidden">Hablemos</span>
-                </span>
-                <h2 class="text-3xl font-black text-white sm:text-4xl">
-                    <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
-                </h2>
-                <p class="text-sm leading-relaxed text-slate-400">
-                    <span class="lang-fr">Je serai disponible pour de nouvelles opportunités à partir de <strong>septembre 2027</strong>. N'hésitez pas à me contacter dès maintenant pour en discuter.</span>
-                    <span class="lang-en hidden">I will be available for new opportunities starting <strong>September 2027</strong>. Feel free to contact me now to discuss.</span>
-                    <span class="lang-es hidden">Estaré disponible para nuevas oportunidades a partir de <strong>septiembre de 2027</strong>. No dude en ponerse en contacto conmigo ahora para hablar.</span>
-                </p>
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="grid gap-12 lg:grid-cols-2 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
+                        07 — <span class="lang-fr">Échangeons</span><span class="lang-en hidden">Let's talk</span><span class="lang-es hidden">Hablemos</span>
+                    </span>
+                    <h2 class="text-3xl font-black text-white sm:text-4xl">
+                        <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
+                    </h2>
+                    <p class="text-sm leading-relaxed text-slate-400">
+                        <span class="lang-fr">Je serai disponible pour de nouvelles opportunités à partir de <strong>septembre 2027</strong>. N'hésitez pas à me contacter dès maintenant pour en discuter.</span>
+                        <span class="lang-en hidden">I will be available for new opportunities starting <strong>September 2027</strong>. Feel free to contact me now to discuss.</span>
+                        <span class="lang-es hidden">Estaré disponible para nuevas oportunidades a partir de <strong>septiembre de 2027</strong>. No dude en ponerse en contacto conmigo ahora para hablar.</span>
+                    </p>
 
-                <!-- Grid contact items -->
-                <div class="grid gap-4 sm:grid-cols-2 text-left pt-6">
-                    <a href="mailto:mathiam.taylor@gmail.com" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-envelope"></i></div>
-                        <span class="text-xs sm:text-sm text-slate-300">mathiam.taylor@gmail.com</span>
-                    </a>
-                    
-                    <a href="tel:0772308939" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-phone"></i></div>
-                        <span class="text-xs sm:text-sm text-slate-300">+33 7 72 30 89 39</span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/mathiam-taylor/" target="_blank" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-brands fa-linkedin-in"></i></div>
-                        <span class="text-xs sm:text-sm text-slate-300">Mathiam Taylor — LinkedIn</span>
-                    </a>
-
-                    <div class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-700/50 text-slate-400"><i class="fa-solid fa-location-dot"></i></div>
-                        <span class="text-xs sm:text-sm text-slate-300">Dax (40) / Bordeaux (33)</span>
+                    <div class="space-y-4">
+                        <a href="mailto:mathiam.taylor@gmail.com" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-envelope"></i></div>
+                            <span class="text-xs sm:text-sm text-slate-300">mathiam.taylor@gmail.com</span>
+                        </a>
+                        <a href="tel:0772308939" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-phone"></i></div>
+                            <span class="text-xs sm:text-sm text-slate-300">+33 7 72 30 89 39</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mathiam-taylor/" target="_blank" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <span class="text-xs sm:text-sm text-slate-300">Mathiam Taylor — LinkedIn</span>
+                        </a>
+                        <div class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-700/50 text-slate-400"><i class="fa-solid fa-location-dot"></i></div>
+                            <span class="text-xs sm:text-sm text-slate-300">Dax (40) / Bordeaux (33)</span>
+                        </div>
                     </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <img class="h-96 w-full max-w-md rounded-3xl object-cover border border-dark-border shadow-2xl" alt="Mathiam Taylor Portrait" src="IMG_4191.jpeg">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark-base py-10 text-center text-xs text-slate-500 border-t border-dark-border/40 relative z-10">
         <p>&copy; 2026 Mathiam Taylor — Portfolio.</p>
     </footer>
 
-    <!-- Interactive Logic scripts -->
     <script>
-        // Skills Tabs logic
         function switchTab(tabId) {
-            // Hide all tab contents
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
-            
-            // Show the active tab content
             document.getElementById(tabId).classList.remove('hidden');
 
-            // Reset tab button states
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.className = "tab-btn px-4 py-2 rounded-xl text-xs font-bold border border-dark-border bg-dark-card/50 text-slate-400 hover:text-white transition";
             });
 
-            // Set active button class
             const activeBtn = document.getElementById('btn-' + tabId);
             activeBtn.className = "tab-btn active px-4 py-2 rounded-xl text-xs font-bold border border-brand-pin bg-brand-pin/15 text-brand-pin transition";
         }
 
-        // Mobile Menu Toggling
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile dropdown on link clicks
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
         document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
         });
 
-        // Multilingual switching logic (FR, EN, ES)
         function switchLanguage(lang) {
-            // Translate all textual content classes
             document.querySelectorAll('.lang-fr, .lang-en, .lang-es').forEach(el => {
                 el.classList.add('hidden');
             });
@@ -958,7 +828,6 @@
                 el.classList.remove('hidden');
             });
 
-            // Adjust language selector button styling
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('bg-brand-pin', 'text-dark-base');
                 btn.classList.add('text-slate-400');
@@ -967,7 +836,6 @@
             activeBtn.classList.remove('text-slate-400');
             activeBtn.classList.add('bg-brand-pin', 'text-dark-base');
 
-            // Dynamically alter CV visual and PDF reference matching
             const cvImg = document.getElementById('cv-img-display');
             const cvBtn = document.getElementById('cv-download-btn');
             
