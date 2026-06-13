@@ -44,6 +44,7 @@
 </head>
 <body class="text-slate-100 antialiased selection:bg-brand-pin selection:text-dark-base">
 
+    <!-- Arrière-plans lumineux style Arthur Coudour -->
     <div class="fixed pointer-events-none inset-0 z-0 overflow-hidden">
         <div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-brand-pin/10 blur-[150px]"></div>
         <div class="absolute top-[40%] -left-40 w-[500px] h-[500px] rounded-full bg-brand-ochre/5 blur-[130px]"></div>
@@ -56,53 +57,48 @@
                 <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-pin to-brand-blue text-sm font-black text-dark-base group-hover:scale-105 transition-transform">MT</span>
                 <span class="font-display font-extrabold tracking-tight text-white group-hover:text-brand-pin transition-colors">Mathiam Taylor</span>
             </a>
-            
-            <nav class="hidden items-center gap-6 md:flex">
-                <a href="#about" class="text-sm font-medium text-slate-400 transition hover:text-white">
-                    <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span><span class="lang-es hidden">Sobre mí</span>
-                </a>
-                <a href="#competences" class="text-sm font-medium text-slate-400 transition hover:text-white">
-                    <span class="lang-fr">Compétences</span><span class="lang-en hidden">Skills</span><span class="lang-es hidden">Competencias</span>
-                </a>
-                <a href="#experiences" class="text-sm font-medium text-slate-400 transition hover:text-white">
-                    <span class="lang-fr">Expériences</span><span class="lang-en hidden">Experience</span><span class="lang-es hidden">Experiencia</span>
-                </a>
-                <a href="#formation" class="text-sm font-medium text-slate-400 transition hover:text-white">
-                    <span class="lang-fr">Formation</span><span class="lang-en hidden">Education</span><span class="lang-es hidden">Formación</span>
-                </a>
-                <a href="#interets" class="text-sm font-medium text-slate-400 transition hover:text-white">
-                    <span class="lang-fr">Centres d'intérêt</span><span class="lang-en hidden">Interests</span><span class="lang-es hidden">Intereses</span>
-                </a>
-                <a href="#projet-pro" class="text-sm font-medium text-slate-400 transition hover:text-white">
-                    <span class="lang-fr">Projet pro</span><span class="lang-en hidden">Career Plan</span><span class="lang-es hidden">Proyecto</span>
-                </a>
-                <a href="#cv" class="text-sm font-medium text-slate-400 transition hover:text-white">
-                    <span class="lang-fr">Mon CV</span><span class="lang-en hidden">Resume</span><span class="lang-es hidden">Mi CV</span>
-                </a>
-                <a href="#contact" class="rounded-xl border border-brand-pin/40 bg-brand-pin/5 px-5 py-2.5 text-sm font-bold text-brand-pin transition hover:bg-brand-pin hover:text-dark-base">
-                    <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
-                </a>
-            </nav>
 
             <div class="flex items-center gap-4">
+                <!-- Sélecteur de langue -->
                 <div class="flex items-center gap-1 bg-dark-card/80 rounded-full p-1 border border-dark-border">
                     <button onclick="switchLanguage('fr')" id="btn-fr" class="lang-btn px-2 py-1 text-[10px] font-bold rounded-full bg-brand-pin text-dark-base transition">FR</button>
                     <button onclick="switchLanguage('en')" id="btn-en" class="lang-btn px-2 py-1 text-[10px] font-bold rounded-full text-slate-400 hover:text-white transition">EN</button>
                     <button onclick="switchLanguage('es')" id="btn-es" class="lang-btn px-2 py-1 text-[10px] font-bold rounded-full text-slate-400 hover:text-white transition">ES</button>
                 </div>
-                <button id="menu-btn" class="text-slate-300 focus:outline-none md:hidden" aria-label="Menu"><i class="fa-solid fa-bars text-xl"></i></button>
+                <!-- Menu burger universel (ordinateur + mobile) -->
+                <button id="menu-btn" class="text-slate-300 focus:outline-none flex items-center justify-center h-10 w-10 rounded-xl hover:bg-dark-card transition border border-dark-border/40" aria-label="Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
         
-        <div id="mobile-menu" class="hidden border-t border-dark-border bg-dark-base/95 px-6 py-4 shadow-xl md:hidden">
-            <div class="flex flex-col gap-4">
-                <a href="#about" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">À propos</span><span class="lang-en hidden">About</span><span class="lang-es hidden">Sobre mí</span></a>
-                <a href="#competences" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Compétences</span><span class="lang-en hidden">Skills</span><span class="lang-es hidden">Competencias</span></a>
-                <a href="#experiences" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Expériences</span><span class="lang-en hidden">Experience</span><span class="lang-es hidden">Experiencia</span></a>
-                <a href="#formation" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Formation</span><span class="lang-en hidden">Education</span><span class="lang-es hidden">Formación</span></a>
-                <a href="#interets" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Centres d'intérêt</span><span class="lang-en hidden">Interests</span><span class="lang-es hidden">Intereses</span></a>
-                <a href="#projet-pro" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Projet pro</span><span class="lang-en hidden">Career Plan</span><span class="lang-es hidden">Proyecto</span></a>
-                <a href="#cv" class="mobile-link text-base font-semibold text-slate-300"><span class="lang-fr">Mon CV</span><span class="lang-en hidden">Resume</span><span class="lang-es hidden">Mi CV</span></a>
+        <!-- Menu déroulant (S'organise en grille sur ordinateur) -->
+        <div id="mobile-menu" class="hidden border-t border-dark-border bg-dark-base/95 px-6 py-8 shadow-xl">
+            <div class="mx-auto max-w-4xl flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="#about" class="mobile-link text-base font-semibold text-slate-300 hover:text-brand-pin transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span><span class="lang-es hidden">Sobre mí</span>
+                </a>
+                <a href="#competences" class="mobile-link text-base font-semibold text-slate-300 hover:text-brand-pin transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">Compétences</span><span class="lang-en hidden">Skills</span><span class="lang-es hidden">Competencias</span>
+                </a>
+                <a href="#experiences" class="mobile-link text-base font-semibold text-slate-300 hover:text-brand-pin transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">Expériences</span><span class="lang-en hidden">Experience</span><span class="lang-es hidden">Experiencia</span>
+                </a>
+                <a href="#formation" class="mobile-link text-base font-semibold text-slate-300 hover:text-brand-pin transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">Formation</span><span class="lang-en hidden">Education</span><span class="lang-es hidden">Formación</span>
+                </a>
+                <a href="#interets" class="mobile-link text-base font-semibold text-slate-300 hover:text-brand-pin transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">Centres d'intérêt</span><span class="lang-en hidden">Interests</span><span class="lang-es hidden">Intereses</span>
+                </a>
+                <a href="#projet-pro" class="mobile-link text-base font-semibold text-slate-300 hover:text-brand-pin transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">Projet pro</span><span class="lang-en hidden">Career Plan</span><span class="lang-es hidden">Proyecto</span>
+                </a>
+                <a href="#cv" class="mobile-link text-base font-semibold text-slate-300 hover:text-brand-pin transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">Mon CV</span><span class="lang-en hidden">Resume</span><span class="lang-es hidden">Mi CV</span>
+                </a>
+                <a href="#contact" class="mobile-link text-base font-semibold text-brand-pin hover:text-emerald-400 transition py-2 border-b border-dark-border/20">
+                    <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
+                </a>
             </div>
         </div>
     </header>
@@ -125,17 +121,8 @@
             <p class="mt-8 max-w-2xl text-base text-slate-300 sm:text-lg mx-auto leading-relaxed">
                 <span class="lang-fr">Actuellement en troisième année de BUT Techniques de Commercialisation à Bordeaux (parcours marketing digital, e-business et entrepreneuriat) et en alternance à l’Office de Tourisme du Pays Tarusate, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’Université de Lima (Pérou) dans le cadre d’un Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI).</span>
                 <span class="lang-en hidden">Currently in my third year of a Bachelor's in Business and Marketing in Bordeaux (Digital Marketing, E-business and Entrepreneurship track) and doing a work-study program at the Pays Tarusate Tourist Office, I am preparing for a one-year university exchange at the University of Lima (Peru) as part of an International Technological University Diploma (DUETI).</span>
-                <span class="lang-es hidden">Actualmente en mi tercer año de Grado en Comercialización en Burdeos (especialidad en marketing digital, e-business y emprendimiento) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un Diploma Universitario de Estudios Tecnológicos Internacionales (DUETI).</span>
+                <span class="lang-es hidden">Actuellement en mi tercer año de Grado en Comercialización en Burdeos (especialidad en marketing digital, e-business y emprendimiento) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un Diploma Universitario de Estudios Tecnologiques Internationales (DUETI).</span>
             </p>
-            
-            <div class="flex flex-wrap justify-center gap-4 pt-8">
-                <a href="#contact" class="rounded-xl bg-brand-pin px-8 py-4 text-sm font-bold text-dark-base shadow-lg shadow-brand-pin/20 transition hover:scale-105">
-                    <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
-                </a>
-                <a href="#cv" class="rounded-xl border border-dark-border bg-dark-card/50 px-8 py-4 text-sm font-bold text-white transition hover:bg-dark-card">
-                    <span class="lang-fr">Voir mon CV</span><span class="lang-en hidden">View Resume</span><span class="lang-es hidden">Ver mi CV</span>
-                </a>
-            </div>
 
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation">
                 <span class="text-xs font-bold uppercase tracking-widest"><span class="lang-fr">Défiler</span><span class="lang-en hidden">Scroll</span><span class="lang-es hidden">Desplazar</span></span>
@@ -169,12 +156,12 @@
                     <p class="text-base leading-relaxed text-slate-300 sm:text-lg">
                         <span class="lang-fr">Mon parcours en BUT Techniques de Commercialisation m'a permis de développer une grande polyvalence dans différents domaines tels que le marketing, la vente, la négociation ou encore la conduite de projets digitaux. Ce qui m’anime dans ma vie professionnelle, c'est la diversité des missions qui me sont confiées. J’aime mettre à profit mes compétences variées, allant de la vente ou de la négociation à la création de supports digitaux.</span>
                         <span class="lang-en hidden">My academic path in Business and Marketing has allowed me to develop great versatility in various fields such as marketing, sales, negotiation, and digital project management. What drives me in my professional life is the variety of missions entrusted to me. I love leveraging my diverse skills, ranging from sales and negotiation to the creation of digital content.</span>
-                        <span class="lang-es hidden">Mi trayectoria en el Grado de Comercialización me ha permitido desarrollar una gran versatilidad en diversos campos como el marketing, las ventas, la negociación y la gestión de proyectos digitales. Lo que me motiva en mi vida profesional es la diversidad de las misiones que se me confían. Me encanta aprovechar mis variadas habilidades, desde las ventas y la negociación hasta la creación de soportes digitales.</span>
+                        <span class="lang-es hidden">Mi trayectoria en el Grado de Comercialización me ha permitido développer une grande polyvalence dans divers domaines comme le marketing, les ventes, la négociation ou la gestion de projets digitaux. Lo que me motive en ma vie professionnelle es la diversité de missions qui me sont confiées. Me encanta tirer parti de mes compétences variées allant des ventes et la négociation à la création de supports digitaux.</span>
                     </p>
                     <p class="text-base leading-relaxed text-slate-400">
                         <span class="lang-fr">Curieux et tourné vers le marketing et la gestion de projet, j'aime découvrir de nouvelles méthodes de travail et de nouveaux environnements. Cet état d’esprit s'est directement traduit à travers mes expériences : d’un stage en tant que conseiller chez Sport 2000 à mon poste de responsable marketing et communication à l’Office de Tourisme du Pays Tarusate, en passant par un stage en Allemagne en tant que chargé de communication dans un club sportif.</span>
                         <span class="lang-en hidden">Curious and oriented towards marketing and project management, I love discovering new working methods and environments. This mindset is directly reflected through my experiences: from an internship as a sales advisor at Sport 2000 to my role as marketing and communications manager at the Pays Tarusate Tourist Office, as well as an internship in Germany as a communications officer for a sports club.</span>
-                        <span class="lang-es hidden">Curioso y orientado hacia el marketing y la gestión de proyectos, me encanta descubrir nuevos métodos de trabajo y entornos. Esta mentalidad se refleja directamente a través de mis experiencias: desde unas prácticas como asesor en Sport 2000 hasta mi puesto de responsable de marketing y comunicación en la Oficina de Turismo del Pays Tarusate, pasando por unas prácticas en Alemania como encargado de comunicación en un club deportivo.</span>
+                        <span class="lang-es hidden">Curioso y orientado vers el marketing y la gestión de projets, me encanta découvrir de nouvelles méthodes de travail et de nouveaux environnements. Cette mentalité s'est directement traduit à travers mes expériences : d'un stage en tant que conseiller chez Sport 2000 à mon poste de responsable marketing et communication à l’Office de Tourisme du Pays Tarusate, en passant par un stage en Allemagne en tant que chargé de communication dans un club de sport.</span>
                     </p>
                 </div>
             </div>
@@ -211,6 +198,7 @@
                 </div>
             </div>
             
+            <!-- CONTENU DE L'ONGLET ACTIONS MARKETING -->
             <div id="tab-a" class="tab-content grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
@@ -265,6 +253,7 @@
                 </div>
             </div>
 
+            <!-- CONTENU DE L'ONGLET COMMUNICATION -->
             <div id="tab-b" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
@@ -286,7 +275,7 @@
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
                         <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Animation de réseaux sociaux</span><span class="lang-en hidden">Social Media Management</span><span class="lang-es hidden">Gestión de redes sociales</span>
+                            <span class="lang-fr">Animation de réseaux sociaux</span><span class="lang-en hidden">Social Media Management</span><span class="lang-es hidden">Gestión de réseaux sociaux</span>
                         </h3>
                         <p class="text-xs text-slate-400 leading-relaxed">
                             <span class="lang-fr">Création de contenus, programmation et modération, y compris en langue étrangère.</span>
@@ -308,7 +297,7 @@
                         <p class="text-xs text-slate-400 leading-relaxed">
                             <span class="lang-fr">Réalisation de visuels professionnels, affiches événementielles et documents de présentation.</span>
                             <span class="lang-en hidden">Creation of professional visuals, event posters, and presentation documents.</span>
-                            <span class="lang-es hidden">Creación de visuales profesionales, carteles de eventos y de presentación.</span>
+                            <span class="lang-es hidden">Creación de visuales profesionales, carteles de eventos y de présentation.</span>
                         </p>
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
@@ -319,6 +308,7 @@
                 </div>
             </div>
 
+            <!-- CONTENU DE L'ONGLET VENTE ET CONSEIL -->
             <div id="tab-c" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
@@ -373,6 +363,7 @@
                 </div>
             </div>
 
+            <!-- CONTENU DE L'ONGLET GESTION DE PROJET -->
             <div id="tab-d" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6">
                     <div>
@@ -393,6 +384,7 @@
                 </div>
             </div>
 
+            <!-- CONTENU DE L'ONGLET LANGUES -->
             <div id="tab-e" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col rounded-2xl p-6">
                     <h3 class="text-lg font-bold text-white mb-2">
@@ -460,7 +452,7 @@
                         <p class="text-xs text-brand-pin mt-1">Office de Tourisme du Pays Tarusate — Tartas</p>
                         <ul class="mt-3 space-y-1.5 text-xs text-slate-400 list-disc pl-4">
                             <li><span class="lang-fr">Construction et mise en œuvre du plan de communication du territoire.</span><span class="lang-en hidden">Construction and implementation of the communication plan.</span><span class="lang-es hidden">Construcción e implementación del plan de comunicación.</span></li>
-                            <li><span class="lang-fr">Réalisation d’un mémoire universitaire sur l’influence des réseaux sociaux sur le tourisme landais.</span><span class="lang-en hidden">Writing a university thesis on the influence of social networks on tourism in the Landes region.</span><span class="lang-es hidden">Redacción de una tesina universitaria sobre la influencia de las redes sociales en el turismo de las Landas.</span></li>
+                            <li><span class="lang-fr">Réalisation d’un mémoire universitaire sur l’influence des réseaux sociaux sur le tourisme landais.</span><span class="lang-en hidden">Writing a university thesis on the influence of social networks on tourism in the Landes region.</span><span class="lang-es hidden">Redacción de una tesina universitaire sobre la influencia de las redes sociales en el turismo de las Landas.</span></li>
                             <li><span class="lang-fr">Missions variées (accueil, événementiel, gestion de projet globale).</span><span class="lang-en hidden">Various missions (reception, events, overall project management).</span><span class="lang-es hidden">Diversas misiones (recepción, eventos, gestión global de proyectos).</span></li>
                         </ul>
                     </div>
@@ -630,7 +622,7 @@
                     <p class="text-sm leading-relaxed text-slate-400">
                         <span class="lang-fr">La pratique du sport en compétition et la participation à des épreuves d'endurance ont forgé ma persévérance, mon ambition et une grande rigueur. Ce sont des qualités que je transpose quotidiennement dans mes missions professionnelles.</span>
                         <span class="lang-en hidden">Practicing competitive sports and participating in endurance events have forged my perseverance, ambition, and strong discipline. These are qualities I apply daily in my professional missions.</span>
-                        <span class="lang-es hidden">La práctica deportiva de competición y la participación en pruebas de resistencia han forjado mi perseverancia, mi ambición y un gran rigor. Son cualidades que aplico a diario en mis misiones profesionales.</span>
+                        <span class="lang-es hidden">La práctica deportiva de competición y la participación en pruebas de resistencia han forjado mi perseverancia, mi ambición y un gran rigor. Son cualidades que aplico a diario en mi misiones profesionales.</span>
                     </p>
                 </div>
 
@@ -755,42 +747,36 @@
 
     <section id="contact" class="py-24 relative z-10 border-t border-dark-border/20">
         <div class="mx-auto max-w-7xl px-6">
-            <div class="grid gap-12 lg:grid-cols-2 items-center">
-                <div class="space-y-6">
-                    <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
-                        07 — <span class="lang-fr">Échangeons</span><span class="lang-en hidden">Let's talk</span><span class="lang-es hidden">Hablemos</span>
-                    </span>
-                    <h2 class="text-3xl font-black text-white sm:text-4xl">
-                        <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
-                    </h2>
-                    <p class="text-sm leading-relaxed text-slate-400">
-                        <span class="lang-fr">Je serai disponible pour de nouvelles opportunités à partir de <strong>septembre 2027</strong>. N'hésitez pas à me contacter dès maintenant pour en discuter.</span>
-                        <span class="lang-en hidden">I will be available for new opportunities starting <strong>September 2027</strong>. Feel free to contact me now to discuss.</span>
-                        <span class="lang-es hidden">Estaré disponible para nuevas oportunidades a partir de <strong>septiembre de 2027</strong>. No dude en ponerse en contacto conmigo ahora para hablar.</span>
-                    </p>
+            <div class="max-w-3xl mx-auto space-y-6 text-center">
+                <span class="text-xs font-black uppercase tracking-widest text-brand-pin">
+                    07 — <span class="lang-fr">Échangeons</span><span class="lang-en hidden">Let's talk</span><span class="lang-es hidden">Hablemos</span>
+                </span>
+                <h2 class="text-3xl font-black text-white sm:text-4xl">
+                    <span class="lang-fr">Me contacter</span><span class="lang-en hidden">Contact me</span><span class="lang-es hidden">Contáctame</span>
+                </h2>
+                <p class="text-sm leading-relaxed text-slate-400 max-w-2xl mx-auto">
+                    <span class="lang-fr">Je serai disponible pour de nouvelles opportunités à partir de <strong>septembre 2027</strong>. N'hésitez pas à me contacter dès maintenant pour en discuter.</span>
+                    <span class="lang-en hidden">I will be available for new opportunities starting <strong>September 2027</strong>. Feel free to contact me now to discuss.</span>
+                    <span class="lang-es hidden">Estaré disponible para nuevas oportunidades a partir de <strong>septiembre de 2027</strong>. No dude en ponerse en contacto conmigo ahora para hablar.</span>
+                </p>
 
-                    <div class="space-y-4">
-                        <a href="mailto:mathiam.taylor@gmail.com" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-envelope"></i></div>
-                            <span class="text-xs sm:text-sm text-slate-300">mathiam.taylor@gmail.com</span>
-                        </a>
-                        <a href="tel:0772308939" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-phone"></i></div>
-                            <span class="text-xs sm:text-sm text-slate-300">+33 7 72 30 89 39</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/mathiam-taylor/" target="_blank" class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm hover:border-brand-pin transition">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-brands fa-linkedin-in"></i></div>
-                            <span class="text-xs sm:text-sm text-slate-300">Mathiam Taylor — LinkedIn</span>
-                        </a>
-                        <div class="flex items-center gap-4 rounded-2xl bg-dark-card/50 border border-dark-border p-4 shadow-sm">
-                            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-700/50 text-slate-400"><i class="fa-solid fa-location-dot"></i></div>
-                            <span class="text-xs sm:text-sm text-slate-300">Dax (40) / Bordeaux (33)</span>
-                        </div>
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 pt-8">
+                    <a href="mailto:mathiam.taylor@gmail.com" class="flex flex-col items-center gap-3 rounded-2xl bg-dark-card/50 border border-dark-border p-6 shadow-sm hover:border-brand-pin transition">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-envelope text-lg"></i></div>
+                        <span class="text-xs sm:text-sm text-slate-300 break-all">mathiam.taylor@gmail.com</span>
+                    </a>
+                    <a href="tel:0772308939" class="flex flex-col items-center gap-3 rounded-2xl bg-dark-card/50 border border-dark-border p-6 shadow-sm hover:border-brand-pin transition">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-solid fa-phone text-lg"></i></div>
+                        <span class="text-xs sm:text-sm text-slate-300">+33 7 72 30 89 39</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mathiam-taylor/" target="_blank" class="flex flex-col items-center gap-3 rounded-2xl bg-dark-card/50 border border-dark-border p-6 shadow-sm hover:border-brand-pin transition">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pin/15 text-brand-pin"><i class="fa-brands fa-linkedin-in text-lg"></i></div>
+                        <span class="text-xs sm:text-sm text-slate-300">Mathiam Taylor — LinkedIn</span>
+                    </a>
+                    <div class="flex flex-col items-center gap-3 rounded-2xl bg-dark-card/50 border border-dark-border p-6 shadow-sm">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-700/50 text-slate-400"><i class="fa-solid fa-location-dot text-lg"></i></div>
+                        <span class="text-xs sm:text-sm text-slate-300">Dax (40) / Bordeaux (33)</span>
                     </div>
-                </div>
-
-                <div class="flex justify-center">
-                    <img class="h-96 w-full max-w-md rounded-3xl object-cover border border-dark-border shadow-2xl" alt="Mathiam Taylor Portrait" src="IMG_4191.jpeg">
                 </div>
             </div>
         </div>
@@ -813,13 +799,28 @@
             activeBtn.className = "tab-btn active px-4 py-2 rounded-xl text-xs font-bold border border-brand-pin bg-brand-pin/15 text-brand-pin transition";
         }
 
+        // Script universel pour le menu Burger (Ouverture/Fermeture)
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            if (isHidden) {
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-xl';
+            }
         });
 
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            });
+        });
+
+        // Script de bascule des langues
         function switchLanguage(lang) {
             document.querySelectorAll('.lang-fr, .lang-en, .lang-es').forEach(el => {
                 el.classList.add('hidden');
