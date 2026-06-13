@@ -37,7 +37,6 @@
         }
         .glass-card:hover { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15); }
         
-        /* Background Grid Pattern */
         .bg-grid {
             background-image: radial-gradient(rgba(35, 53, 79, 0.4) 1px, transparent 1px);
             background-size: 24px 24px;
@@ -48,7 +47,7 @@
         
         .hidden { display: none !important; }
 
-        /* Animation Burger */
+        /* Animation Burger Universel */
         .burger-line { transition: all 0.3s ease; }
         .menu-open .line-1 { transform: translateY(6px) rotate(45deg); }
         .menu-open .line-2 { opacity: 0; }
@@ -57,7 +56,6 @@
 </head>
 <body class="text-slate-100 antialiased selection:bg-brand-pin selection:text-dark-base relative">
 
-    <!-- Background Grid & Glowing Orbs -->
     <div class="fixed inset-0 z-0 bg-grid opacity-30 pointer-events-none"></div>
     <div class="fixed pointer-events-none inset-0 z-0 overflow-hidden">
         <div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-brand-pin/10 blur-[150px]"></div>
@@ -65,6 +63,7 @@
         <div class="absolute -bottom-40 right-20 w-[600px] h-[600px] rounded-full bg-brand-blue/10 blur-[160px]"></div>
     </div>
 
+    <!-- HEADER & MENU BURGER UNIVERSEL -->
     <header class="sticky top-0 z-50 w-full border-b border-dark-border/40 bg-dark-base/80 backdrop-blur-lg">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <a href="#" class="flex items-center gap-3 group relative z-50">
@@ -79,7 +78,6 @@
                     <button onclick="switchLanguage('es')" id="btn-es" class="lang-btn px-2 py-1 text-[10px] font-bold rounded-full text-slate-400 hover:text-white transition">ES</button>
                 </div>
                 
-                <!-- Menu Burger Universel -->
                 <button id="menu-btn" class="flex flex-col justify-center items-center h-10 w-10 rounded-xl hover:bg-dark-card transition border border-dark-border/40 gap-1.5 focus:outline-none" aria-label="Menu">
                     <span class="burger-line line-1 block h-0.5 w-5 bg-slate-300 rounded-full"></span>
                     <span class="burger-line line-2 block h-0.5 w-5 bg-slate-300 rounded-full"></span>
@@ -88,7 +86,7 @@
             </div>
         </div>
         
-        <!-- Menu Déroulant Universel (Desktop & Mobile) -->
+        <!-- Menu Déroulant -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full border-b border-dark-border bg-dark-base/95 shadow-2xl backdrop-blur-xl transition-all">
             <div class="mx-auto max-w-5xl px-6 py-8">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
@@ -130,7 +128,7 @@
     </header>
 
     <section class="relative min-h-[90vh] flex flex-col justify-center py-20 z-10">
-        <!-- Floating Badges (Visible on Desktop) -->
+        <!-- Badges flottants -->
         <div class="absolute top-1/4 left-[5%] lg:left-[10%] xl:left-[15%] glass-card px-5 py-2.5 rounded-full flex items-center gap-3 float-animation hidden md:flex shadow-lg shadow-brand-pin/10" style="animation-delay: 0s;">
             <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-pin/20 text-brand-pin"><i class="fa-solid fa-bullseye"></i></div>
             <span class="text-xs font-bold text-slate-200 tracking-wide"><span class="lang-fr">Gestion de projet</span><span class="lang-en hidden">Project Management</span><span class="lang-es hidden">Gestión de proyectos</span></span>
@@ -156,19 +154,19 @@
             
             <p class="mt-10 max-w-4xl text-base text-slate-400 sm:text-lg mx-auto leading-relaxed">
                 <span class="lang-fr">
-                    Actuellement en troisième année de <strong class="text-white font-medium">BUT Techniques de Commercialisation</strong> à Bordeaux (Parcours Marketing digital, e-business et entrepreneuriat) et en alternance à l’<strong class="text-white font-medium">Office de Tourisme du Pays Tarusate</strong>, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’<strong class="text-brand-pin font-medium">Université de Lima (Pérou)</strong> dans le cadre d’un Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI).
+                    Actuellement en troisième année de <strong class="text-white font-bold">BUT Techniques de Commercialisation</strong> à Bordeaux (Parcours <strong class="text-white font-bold">Marketing Digital, E-Business et Entrepreneuriat</strong>) et en alternance à l’<strong class="text-white font-bold">Office de Tourisme du Pays Tarusate</strong>, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’<strong class="text-white font-bold">Université de Lima (Pérou)</strong> dans le cadre d’un <strong class="text-white font-bold">Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI)</strong>.
                 </span>
                 <span class="lang-en hidden">
-                    Currently in my third year of a <strong class="text-white font-medium">Bachelor's in Business and Marketing</strong> in Bordeaux (Digital Marketing, E-business and Entrepreneurship track) and doing a work-study program at the <strong class="text-white font-medium">Pays Tarusate Tourist Office</strong>, I am preparing for a one-year university exchange at the <strong class="text-brand-pin font-medium">University of Lima (Peru)</strong> as part of an International Technological University Diploma (DUETI).
+                    Currently in my third year of a <strong class="text-white font-bold">Bachelor's in Business and Marketing</strong> in Bordeaux (<strong class="text-white font-bold">Digital Marketing, E-Business, and Entrepreneurship</strong> track) and doing a work-study program at the <strong class="text-white font-bold">Pays Tarusate Tourist Office</strong>, I am preparing for a one-year university exchange at the <strong class="text-white font-bold">University of Lima (Peru)</strong> as part of an <strong class="text-white font-bold">International Technological University Diploma (DUETI)</strong>.
                 </span>
                 <span class="lang-es hidden">
-                    Actualmente en mi tercer año de <strong class="text-white font-medium">Grado en Comercialización</strong> en Burdeos (especialidad en marketing digital, e-business y emprendimiento) y en alternancia en la <strong class="text-white font-medium">Oficina de Turismo del Pays Tarusate</strong>, me preparo para realizar un intercambio universitario de un año en la <strong class="text-brand-pin font-medium">Universidad de Lima (Perú)</strong> en el marco de un Diploma Universitario de Estudios Tecnológicos Internacionales (DUETI).
+                    Actualmente en mi tercer año de <strong class="text-white font-bold">Grado en Comercialización</strong> en Burdeos (especialidad en <strong class="text-white font-bold">Marketing Digital, E-Business y Emprendimiento</strong>) y en alternancia en la <strong class="text-white font-bold">Oficina de Turismo del Pays Tarusate</strong>, me preparo para realizar un intercambio universitario de un año en la <strong class="text-white font-bold">Universidad de Lima (Perú)</strong> en el marco de un <strong class="text-white font-bold">Diploma Universitario de Estudios Tecnológicos Internacionales (DUETI)</strong>.
                 </span>
             </p>
         </div>
 
-        <!-- Bouton Découvrir abaissé -->
-        <div class="absolute -bottom-28 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation">
+        <!-- Bouton Découvrir (au-dessus de la ligne de flottaison) -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation">
             <span class="text-[10px] font-bold uppercase tracking-widest"><span class="lang-fr">Découvrir</span><span class="lang-en hidden">Discover</span><span class="lang-es hidden">Descubrir</span></span>
             <div class="h-8 w-5 rounded-full border-2 border-slate-500 flex justify-center pt-1">
                 <div class="h-1.5 w-1.5 rounded-full bg-slate-500 animate-bounce"></div>
@@ -192,7 +190,6 @@
             <div class="grid gap-16 lg:grid-cols-12 items-center">
                 <div class="lg:col-span-5 flex flex-col items-center gap-6">
                     <div class="relative w-64 h-80 sm:w-80 sm:h-96 group">
-                        <!-- Animated glowing frame -->
                         <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-pin via-brand-blue to-brand-ochre opacity-30 blur transition duration-1000 group-hover:opacity-70 group-hover:duration-200"></div>
                         <img class="relative rounded-3xl border border-dark-border object-cover w-full h-full shadow-2xl" alt="Mathiam Taylor" src="IMG_4191.jpeg">
                     </div>
@@ -201,16 +198,16 @@
                 <div class="lg:col-span-7 space-y-8">
                     <div class="glass-card p-6 md:p-8 rounded-2xl border-l-4 border-l-brand-pin">
                         <p class="text-base leading-relaxed text-slate-200 sm:text-lg">
-                            <span class="lang-fr">Mon parcours en <strong class="text-white">BUT Techniques de Commercialisation</strong> m'a permis de développer une grande polyvalence dans différents domaines tels que le marketing, la vente et la négociation ou encore la <strong class="text-brand-pin">conduite de projets digitaux</strong>. Ce qui m’anime dans ma vie professionnelle, c'est la <strong class="text-white">diversité des missions</strong> qui me sont confiées, j’aime mettre à profit mes compétences variées allant de la vente ou de la négociation à la création de supports digitaux.</span>
-                            <span class="lang-en hidden">My academic path in a <strong class="text-white">Bachelor's in Business and Marketing</strong> has allowed me to develop great versatility in various fields such as marketing, sales, negotiation, and <strong class="text-brand-pin">digital project management</strong>. What drives me in my professional life is the <strong class="text-white">diversity of missions</strong> entrusted to me. I love leveraging my varied skills ranging from sales and negotiation to the creation of digital materials.</span>
-                            <span class="lang-es hidden">Mi trayectoria en el <strong class="text-white">Grado de Comercialización</strong> me ha permitido desarrollar una gran polivalencia en diversos dominios como el marketing, las ventas, la negociación o la <strong class="text-brand-pin">gestión de proyectos digitales</strong>. Lo que me motiva en mi vida profesional es la <strong class="text-white">diversidad de las misiones</strong> que se me confían. Me encanta aprovechar mis variadas habilidades, desde las ventas y la negociación hasta la creación de soportes digitales.</span>
+                            <span class="lang-fr">Mon parcours en <strong class="text-white font-bold">BUT Techniques de Commercialisation</strong> m'a permis de développer une grande polyvalence dans différents domaines tels que le marketing, la vente et la négociation ou encore la <strong class="text-brand-pin">conduite de projets digitaux</strong>. Ce qui m’anime dans ma vie professionnelle, c'est la <strong class="text-white font-bold">diversité des missions</strong> qui me sont confiées, j’aime mettre à profit mes compétences variées allant de la vente ou de la négociation à la création de supports digitaux.</span>
+                            <span class="lang-en hidden">My academic path in a <strong class="text-white font-bold">Bachelor's in Business and Marketing</strong> has allowed me to develop great versatility in various fields such as marketing, sales, negotiation, and <strong class="text-brand-pin">digital project management</strong>. What drives me in my professional life is the <strong class="text-white font-bold">diversity of missions</strong> entrusted to me. I love leveraging my varied skills ranging from sales and negotiation to the creation of digital materials.</span>
+                            <span class="lang-es hidden">Mi trayectoria en el <strong class="text-white font-bold">Grado de Comercialización</strong> me ha permitido desarrollar una gran polivalencia en diversos dominios como el marketing, las ventas, la negociación o la <strong class="text-brand-pin">gestión de proyectos digitales</strong>. Lo que me motiva en mi vida profesional es la <strong class="text-white font-bold">diversidad de las misiones</strong> que se me confían. Me encanta aprovechar mis variadas habilidades, desde las ventas y la negociación hasta la creación de soportes digitales.</span>
                         </p>
                     </div>
                     
                     <p class="text-base leading-relaxed text-slate-400 pl-4 border-l border-dark-border">
-                        <span class="lang-fr">Curieux et tourné vers le marketing et la gestion de projet, j'aime découvrir de nouvelles méthodes de travail et de nouveaux environnements. Cet état d’esprit est directement traduit à travers mes expériences allant d’un stage en tant que conseiller chez <strong class="text-slate-200">Sport 2000</strong> à mon poste de responsable marketing et communication à l’<strong class="text-slate-200">Office de Tourisme du Pays Tarusate</strong>, en passant par un stage en Allemagne en tant que Community manager dans un club de badminton.</span>
-                        <span class="lang-en hidden">Curious and oriented towards marketing and project management, I love discovering new working methods and environments. This mindset is directly reflected through my experiences: from an internship as an advisor at <strong class="text-slate-200">Sport 2000</strong> to my position as marketing and communications manager at the <strong class="text-slate-200">Pays Tarusate Tourist Office</strong>, including an internship in Germany as a Community manager in a badminton club.</span>
-                        <span class="lang-es hidden">Curioso y orientado hacia el marketing y la gestión de proyectos, me encanta descubrir nuevos métodos de trabajo y nuevos entornos. Esta mentalidad se refleja directamente a través de mis experiencias: desde unas prácticas como asesor en <strong class="text-slate-200">Sport 2000</strong> hasta mi puesto de responsable de marketing y comunicación en la <strong class="text-slate-200">Oficina de Turismo del Pays Tarusate</strong>, pasando por unas prácticas en Alemania como Community manager en un club de bádminton.</span>
+                        <span class="lang-fr">Curieux et tourné vers le marketing et la gestion de projet, j'aime découvrir de nouvelles méthodes de travail et de nouveaux environnements. Cet état d’esprit est directement traduit à travers mes expériences allant d’un stage en tant que conseiller chez <strong class="text-slate-200 font-bold">SPORT 2000</strong> à mon poste de responsable marketing et communication à l’<strong class="text-slate-200 font-bold">Office de Tourisme du Pays Tarusate</strong>, en passant par un stage en Allemagne en tant que <strong class="text-slate-200 font-bold">Community Manager</strong> dans un club de badminton.</span>
+                        <span class="lang-en hidden">Curious and oriented towards marketing and project management, I love discovering new working methods and environments. This mindset is directly reflected through my experiences: from an internship as an advisor at <strong class="text-slate-200 font-bold">SPORT 2000</strong> to my position as marketing and communications manager at the <strong class="text-slate-200 font-bold">Pays Tarusate Tourist Office</strong>, including an internship in Germany as a <strong class="text-slate-200 font-bold">Community Manager</strong> in a badminton club.</span>
+                        <span class="lang-es hidden">Curioso y orientado hacia el marketing y la gestión de proyectos, me encanta descubrir nuevos métodos de trabajo y nuevos entornos. Esta mentalidad se refleja directamente a través de mis experiencias: desde unas prácticas como asesor en <strong class="text-slate-200 font-bold">SPORT 2000</strong> hasta mi puesto de responsable de marketing y comunicación en la <strong class="text-slate-200 font-bold">Oficina de Turismo del Pays Tarusate</strong>, pasando por unas prácticas en Alemania como <strong class="text-slate-200 font-bold">Community Manager</strong> en un club de bádminton.</span>
                     </p>
                 </div>
             </div>
@@ -247,7 +244,6 @@
                 </div>
             </div>
             
-            <!-- BLOCS A: MARKETING -->
             <div id="tab-a" class="tab-content grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
                     <div>
@@ -296,7 +292,6 @@
                 </div>
             </div>
 
-            <!-- BLOCS B: COMMUNICATION -->
             <div id="tab-b" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
                     <div>
@@ -348,7 +343,6 @@
                 </div>
             </div>
 
-            <!-- BLOCS C: VENTE ET CONSEIL -->
             <div id="tab-c" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
                     <div>
@@ -397,7 +391,6 @@
                 </div>
             </div>
 
-            <!-- BLOCS D: GESTION DE PROJET -->
             <div id="tab-d" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
                     <div>
@@ -446,7 +439,6 @@
                 </div>
             </div>
 
-            <!-- BLOCS E: LANGUES -->
             <div id="tab-e" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="glass-card flex flex-col rounded-2xl p-6 border-t-4 border-t-brand-pin">
                     <h3 class="text-lg font-bold text-white mb-2">
@@ -500,10 +492,8 @@
             </div>
 
             <div class="relative ml-4 md:ml-32 space-y-12">
-                <!-- Glowing Timeline Line -->
                 <div class="absolute top-0 bottom-0 left-[7.5px] md:-left-[24.5px] w-0.5 bg-gradient-to-b from-brand-pin via-brand-blue to-transparent z-0"></div>
 
-                <!-- Exp 1: Office de Tourisme -->
                 <div class="relative pl-8 md:pl-0 group">
                     <span class="absolute left-[3px] md:-left-[29px] top-1.5 h-3 w-3 rounded-full bg-brand-pin shadow-[0_0_10px_rgba(16,185,129,0.8)] z-10 ring-4 ring-dark-base"></span>
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-brand-pin">
@@ -511,7 +501,7 @@
                     </div>
                     <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-pin/50 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
                         <div class="shrink-0 pt-1">
-                            <img src="otpt.png" alt="OTPT" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                            <img src="otpt.png" alt="OTPT" class="w-16 h-16 object-contain">
                         </div>
                         <div>
                             <h3 class="text-base font-extrabold text-white">
@@ -529,7 +519,6 @@
                     </div>
                 </div>
 
-                <!-- Exp 2: Crédit Agricole 2025 -->
                 <div class="relative pl-8 md:pl-0 group">
                     <span class="absolute left-[3px] md:-left-[29px] top-1.5 h-3 w-3 rounded-full bg-brand-blue shadow-[0_0_10px_rgba(59,130,246,0.5)] z-10 ring-4 ring-dark-base"></span>
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-brand-blue">
@@ -537,7 +526,7 @@
                     </div>
                     <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-blue/50 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
                         <div class="shrink-0 pt-1">
-                            <img src="ca.png" alt="Crédit Agricole" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                            <img src="ca.png" alt="Crédit Agricole" class="w-16 h-16 object-contain">
                         </div>
                         <div>
                             <h3 class="text-base font-extrabold text-white">
@@ -553,7 +542,6 @@
                     </div>
                 </div>
 
-                <!-- Exp 3: Thermes de Saubusse -->
                 <div class="relative pl-8 md:pl-0 group">
                     <span class="absolute left-[3px] md:-left-[29px] top-1.5 h-3 w-3 rounded-full bg-slate-500 z-10 ring-4 ring-dark-base"></span>
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
@@ -561,7 +549,7 @@
                     </div>
                     <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-slate-500/50 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
                         <div class="shrink-0 pt-1">
-                            <img src="thermes.png" alt="Thermes de Saubusse" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                            <img src="thermes.png" alt="Thermes de Saubusse" class="w-16 h-16 object-contain">
                         </div>
                         <div>
                             <h3 class="text-base font-extrabold text-white">
@@ -577,7 +565,6 @@
                     </div>
                 </div>
 
-                <!-- Exp 4: BSC Unna -->
                 <div class="relative pl-8 md:pl-0 group">
                     <span class="absolute left-[3px] md:-left-[29px] top-1.5 h-3 w-3 rounded-full bg-slate-500 z-10 ring-4 ring-dark-base"></span>
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
@@ -585,7 +572,7 @@
                     </div>
                     <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-slate-500/50 hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
                         <div class="shrink-0 pt-1">
-                            <img src="unna.jpeg" alt="BSC Unna" class="w-16 h-16 rounded-xl object-cover bg-white/5 p-1 border border-dark-border">
+                            <img src="unna.jpeg" alt="BSC Unna" class="w-16 h-16 object-contain">
                         </div>
                         <div>
                             <h3 class="text-base font-extrabold text-white">
@@ -601,7 +588,6 @@
                     </div>
                 </div>
 
-                <!-- Exp 5: Crédit Agricole 2024 -->
                 <div class="relative pl-8 md:pl-0 group">
                     <span class="absolute left-[3px] md:-left-[29px] top-1.5 h-3 w-3 rounded-full bg-brand-blue/50 z-10 ring-4 ring-dark-base"></span>
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
@@ -609,7 +595,7 @@
                     </div>
                     <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-blue/30 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
                         <div class="shrink-0 pt-1">
-                            <img src="ca.png" alt="Crédit Agricole" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                            <img src="ca.png" alt="Crédit Agricole" class="w-16 h-16 object-contain">
                         </div>
                         <div>
                             <h3 class="text-base font-extrabold text-white">
@@ -625,7 +611,6 @@
                     </div>
                 </div>
 
-                <!-- Exp 6: SPORT 2000 -->
                 <div class="relative pl-8 md:pl-0 group">
                     <span class="absolute left-[3px] md:-left-[29px] top-1.5 h-3 w-3 rounded-full bg-brand-pin/50 z-10 ring-4 ring-dark-base"></span>
                     <div class="md:absolute md:-left-40 md:top-1 text-xs font-black uppercase tracking-widest text-slate-500">
@@ -633,7 +618,7 @@
                     </div>
                     <div class="glass-card rounded-2xl p-6 transition-all duration-300 group-hover:border-brand-pin/30 group-hover:-translate-y-1 flex flex-col sm:flex-row gap-6 items-start">
                         <div class="shrink-0 pt-1">
-                            <img src="sport2000.png" alt="SPORT 2000" class="w-16 h-16 rounded-xl object-contain bg-white/5 p-1 border border-dark-border">
+                            <img src="sport2000.png" alt="SPORT 2000" class="w-16 h-16 object-contain">
                         </div>
                         <div>
                             <h3 class="text-base font-extrabold text-white">
@@ -677,7 +662,12 @@
                             <span class="lang-en hidden">University exchange</span>
                             <span class="lang-es hidden">Intercambio universitario</span>
                         </h3>
-                        <p class="text-sm font-bold text-brand-pin mb-4">Universidad de Lima (Pérou / Peru)</p>
+                        <p class="text-sm font-bold text-brand-pin mb-4">
+                            Universidad de Lima
+                            <span class="lang-fr">(Pérou)</span>
+                            <span class="lang-en hidden">(Peru)</span>
+                            <span class="lang-es hidden">(Perú)</span>
+                        </p>
                         <p class="text-xs text-slate-400 leading-relaxed">
                             <span class="lang-fr">Dans le cadre d'un Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI).</span>
                             <span class="lang-en hidden">As part of an International Technological University Diploma (DUETI).</span>
@@ -689,7 +679,7 @@
                 <div class="glass-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-brand-blue/40">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue/15 text-brand-blue"><i class="fa-solid fa-graduation-cap text-xl"></i></div>
+                            <img src="BM_TCOBX_RVB.webp" alt="IUT Bordeaux" class="w-12 h-12 object-contain">
                             <span class="text-xs font-black uppercase tracking-widest text-slate-500 bg-dark-base px-3 py-1 rounded-full border border-dark-border">2023 - 2026</span>
                         </div>
                         <h3 class="text-lg font-extrabold text-white mb-2">
@@ -709,7 +699,7 @@
                 <div class="glass-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-slate-400/40">
                     <div>
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-700/30 text-slate-400"><i class="fa-solid fa-school text-xl"></i></div>
+                            <img src="Logo_Borda_generique_rvb-e1686843860253.png" alt="Lycée de Borda" class="w-12 h-12 object-contain">
                             <span class="text-xs font-black uppercase tracking-widest text-slate-500 bg-dark-base px-3 py-1 rounded-full border border-dark-border">2020 - 2023</span>
                         </div>
                         <h3 class="text-lg font-extrabold text-white mb-2">
@@ -765,8 +755,9 @@
                         <span class="lang-es hidden">La práctica deportiva de competición y la participación en pruebas de resistencia han forjado mi perseverancia, mi ambición y un gran rigor. Son cualidades que aplico a diario en mis misiones profesionales.</span>
                     </p>
 
-                    <div class="mt-4 rounded-xl overflow-hidden border border-dark-border opacity-90 group-hover:opacity-100 transition-opacity">
-                        <img src="sport.png" alt="Sport" class="w-full h-auto object-cover">
+                    <!-- Bannière image sous le texte -->
+                    <div class="mt-4 rounded-xl overflow-hidden opacity-90 group-hover:opacity-100 transition-opacity">
+                        <img src="sport.png" alt="Sport" class="w-full h-auto object-cover rounded-xl">
                     </div>
                 </div>
 
@@ -788,8 +779,9 @@
                         <span class="lang-es hidden">Estados Unidos, Inglaterra, España, Italia, Países Bajos, Suecia, Albania, Costa de Marfil, India...<br><br>Descubrir estos países ha forjado mi curiosidad y mi gran capacidad de adaptación. Estas inmersiones regulares me han permitido practicar idiomas en condiciones reales y desarrollar una verdadera facilidad para relacionarme con los demás.</span>
                     </p>
 
-                    <div class="mt-4 rounded-xl overflow-hidden border border-dark-border opacity-90 group-hover:opacity-100 transition-opacity">
-                        <img src="voyage.png" alt="Voyages" class="w-full h-auto object-cover">
+                    <!-- Bannière image sous le texte -->
+                    <div class="mt-4 rounded-xl overflow-hidden opacity-90 group-hover:opacity-100 transition-opacity">
+                        <img src="voyage.png" alt="Voyages" class="w-full h-auto object-cover rounded-xl">
                     </div>
                 </div>
             </div>
@@ -808,7 +800,6 @@
             </div>
 
             <div class="grid gap-12 lg:grid-cols-12 items-start">
-                <!-- Timeline d'objectifs (Gauche) -->
                 <div class="lg:col-span-7 space-y-10">
                     <div class="glass-card rounded-xl p-6 border-l-4 border-l-brand-pin shadow-lg relative overflow-hidden group">
                         <div class="absolute -right-10 -top-10 text-brand-pin/5 text-9xl group-hover:text-brand-pin/10 transition-colors"><i class="fa-solid fa-plane"></i></div>
@@ -816,9 +807,9 @@
                             <span class="lang-fr">Départ à l'international (2026-2027)</span><span class="lang-en hidden">International Departure (2026-2027)</span><span class="lang-es hidden">Salida Internacional (2026-2027)</span>
                         </p>
                         <p class="text-base text-slate-200 leading-relaxed relative z-10">
-                            <span class="lang-fr">Dans le cadre d'un <strong class="text-white">Diplôme Universitaire d'Etudes Technologiques Internationales</strong>, je pars pour 2 semestres étudier à l'Universidad de Lima au Pérou.</span>
-                            <span class="lang-en hidden">As part of an <strong class="text-white">International Technological University Diploma</strong>, I am leaving for 2 semesters to study at the Universidad de Lima in Peru.</span>
-                            <span class="lang-es hidden">Como parte de un <strong class="text-white">Diploma Universitario de Estudios Tecnológicos Internacionales</strong>, me voy 2 semestres a estudiar a la Universidad de Lima en Perú.</span>
+                            <span class="lang-fr">Dans le cadre d'un <strong class="text-white font-bold">Diplôme Universitaire d'Etudes Technologiques Internationales</strong>, je pars pour 2 semestres étudier à l'Universidad de Lima au Pérou.</span>
+                            <span class="lang-en hidden">As part of an <strong class="text-white font-bold">International Technological University Diploma</strong>, I am leaving for 2 semesters to study at the Universidad de Lima in Peru.</span>
+                            <span class="lang-es hidden">Como parte de un <strong class="text-white font-bold">Diploma Universitario de Estudios Tecnológicos Internacionales</strong>, me voy 2 semestres a estudiar a la Universidad de Lima en Perú.</span>
                         </p>
                     </div>
 
@@ -853,7 +844,6 @@
                     </div>
                 </div>
 
-                <!-- Couverture Mémoire (Droite) -->
                 <div class="lg:col-span-5 flex justify-center mt-8 lg:mt-0">
                     <div class="glass-card p-6 md:p-8 rounded-2xl border-t-4 border-t-brand-blue w-full max-w-sm transition-transform hover:-translate-y-2 duration-300">
                         <p class="text-[11px] text-brand-blue font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
@@ -864,8 +854,8 @@
                             <span class="lang-en hidden">"Digital marketing as a lever to rebalance tourist flows"</span>
                             <span class="lang-es hidden">"El marketing digital como palanca para reequilibrar los flujos turísticos"</span>
                         </p>
-                        <div class="rounded-xl overflow-hidden border border-dark-border shadow-2xl relative flex justify-center bg-dark-base p-1">
-                            <img src="1.png" alt="Couverture Mémoire" class="w-full h-auto object-cover rounded-lg">
+                        <div class="rounded-xl overflow-hidden shadow-2xl relative flex justify-center bg-dark-base">
+                            <img src="1.png" alt="Couverture Mémoire" class="w-full h-auto object-cover rounded-lg border border-dark-border">
                         </div>
                     </div>
                 </div>
@@ -883,16 +873,14 @@
                 <h2 class="text-3xl font-black text-white sm:text-4xl">
                     <span class="lang-fr">Mon CV</span><span class="lang-en hidden">My Resume</span><span class="lang-es hidden">Mi CV</span>
                 </h2>
-                <!-- Bouton de téléchargement PDF dynamique -->
-                <a id="cv-download-btn" href="cv-fr.pdf" download class="inline-flex items-center gap-2 rounded-xl border border-brand-pin bg-brand-pin/10 px-8 py-4 text-sm font-bold text-brand-pin transition hover:bg-brand-pin hover:text-dark-base shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                <a id="cv-download-btn" href="cv-fr.pdf" download class="inline-flex items-center gap-2 rounded-xl border border-brand-pin bg-brand-pin/10 px-8 py-4 text-sm font-bold text-brand-pin transition hover:bg-brand-pin hover:text-dark-base shadow-[0_0_20px_rgba(16,185,129,0.2)] mt-4">
                     <i class="fa-solid fa-download"></i> 
                     <span class="lang-fr">Télécharger en PDF</span><span class="lang-en hidden">Download PDF</span><span class="lang-es hidden">Descargar en PDF</span>
                 </a>
             </div>
 
-            <!-- Affichage de l'image du CV dynamique -->
-            <div class="mx-auto max-w-4xl rounded-2xl overflow-hidden border border-dark-border shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                <img id="cv-img-display" src="Capture d’écran 2026-06-13 à 15.48.32.png" alt="CV Mathiam Taylor" class="w-full h-auto object-cover bg-white">
+            <div class="mx-auto max-w-4xl rounded-2xl overflow-hidden border border-dark-border shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-white relative h-[800px]">
+                <iframe id="cv-iframe-display" src="cv-fr.pdf#toolbar=0&view=FitH" class="absolute inset-0 w-full h-full border-none"></iframe>
             </div>
         </div>
     </section>
@@ -939,7 +927,6 @@
     </footer>
 
     <script>
-        // Logique pour les onglets de compétences
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
             document.getElementById(tabId).classList.remove('hidden');
@@ -952,7 +939,6 @@
             activeBtn.className = "tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold border border-brand-pin bg-brand-pin/15 text-brand-pin transition hover:bg-brand-pin/20";
         }
 
-        // Logique pour le Menu Burger
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -961,7 +947,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Fermer le menu lors d'un clic sur un lien
         document.querySelectorAll('.mobile-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -969,13 +954,10 @@
             });
         });
 
-        // Logique pour la traduction multilingue
         function switchLanguage(lang) {
-            // Bascule des textes
             document.querySelectorAll('.lang-fr, .lang-en, .lang-es').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
 
-            // Mise à jour visuelle des boutons de langue
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('bg-brand-pin', 'text-dark-base');
                 btn.classList.add('text-slate-400');
@@ -984,18 +966,17 @@
             activeBtn.classList.remove('text-slate-400');
             activeBtn.classList.add('bg-brand-pin', 'text-dark-base');
 
-            // Changement dynamique du CV (Image et lien PDF)
-            const cvImg = document.getElementById('cv-img-display');
+            const cvIframe = document.getElementById('cv-iframe-display');
             const cvBtn = document.getElementById('cv-download-btn');
             
             if(lang === 'fr') {
-                cvImg.src = 'Capture d’écran 2026-06-13 à 15.48.32.png';
+                cvIframe.src = 'cv-fr.pdf#toolbar=0&view=FitH';
                 cvBtn.href = 'cv-fr.pdf';
             } else if (lang === 'en') {
-                cvImg.src = 'Capture d’écran 2026-06-13 à 16.06.41.png';
+                cvIframe.src = 'cv-en.pdf#toolbar=0&view=FitH';
                 cvBtn.href = 'cv-en.pdf';
             } else if (lang === 'es') {
-                cvImg.src = 'Capture d’écran 2026-06-13 à 16.06.56.png';
+                cvIframe.src = 'cv-es.pdf#toolbar=0&view=FitH';
                 cvBtn.href = 'cv-es.pdf';
             }
         }
