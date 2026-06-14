@@ -25,6 +25,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- CSS de jsVectorMap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css">
+    
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0B0F19; }
         h1, h2, h3, h4, .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -67,6 +70,19 @@
         .menu-open .line-1 { transform: translateY(6px) rotate(45deg); }
         .menu-open .line-2 { opacity: 0; }
         .menu-open .line-3 { transform: translateY(-6px) rotate(-45deg); }
+
+        /* Style de la bulle d'info de la carte */
+        .jvm-tooltip {
+            background-color: #0B0F19 !important;
+            color: #f1f5f9 !important;
+            border: 1px solid #23354F !important;
+            border-radius: 8px !important;
+            padding: 6px 12px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 11px !important;
+            font-weight: 600 !important;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+        }
     </style>
 </head>
 <body class="text-slate-100 antialiased selection:bg-brand-pin selection:text-dark-base relative">
@@ -873,9 +889,9 @@
                             <span class="lang-es hidden">Estados Unidos, Inglaterra, España, Italia, Países Bajos, Suecia, Albania, Costa de Marfil, India...<br><br>Descubrir estos países ha forjado mi curiosidad y mi gran capacidad de adaptación. Estas inmersiones regulares me han permitido practicar idiomas en condiciones reales y desarrollar una verdadera facilidad para relacionarme con los demás.</span>
                         </p>
                     </div>
-                    <!-- Bannière Image Voyage -->
-                    <div class="w-full h-48 border-t border-dark-border/50">
-                        <img src="voyage.png" alt="Voyages" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300">
+                    <!-- Carte Interactive Voyage -->
+                    <div class="w-full h-56 sm:h-64 border-t border-dark-border/50 bg-dark-base relative overflow-hidden group">
+                        <div id="map-container" class="w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                 </div>
             </div>
@@ -931,9 +947,9 @@
                                     <span class="lang-fr">Objectif à moyen/long terme</span><span class="lang-en hidden">Medium/long-term goal</span><span class="lang-es hidden">Objetivo a medio/largo plazo</span>
                                 </h4>
                                 <p class="text-sm text-slate-400 leading-relaxed">
-                                    <span class="lang-fr">Rejoindre une entreprise dans laquelle je pourrais avoir des responsabilités et pourrais mettre à profit toutes mes compétences développées lors de mes études (marketing, communication, vente, négociation et prospection, langues étrangères).</span>
-                                    <span class="lang-en hidden">Join a company where I could have responsibilities and could leverage all the skills developed during my studies (marketing, communication, sales, negotiation and prospecting, foreign languages).</span>
-                                    <span class="lang-es hidden">Unirme a una empresa en la que pueda tener responsabilidades y pueda aprovechar todas las competencias desarrolladas durante mis estudios (marketing, comunicación, ventas, negociación y prospección, idiomas extranjeros).</span>
+                                    <span class="lang-fr">Rejoindre une entreprise dans laquelle je pourrais avoir des responsabilités et pourrais mettre à profit toutes mes compétences développées lors de mes études.</span>
+                                    <span class="lang-en hidden">Join a company where I could have responsibilities and could leverage all the skills developed during my studies.</span>
+                                    <span class="lang-es hidden">Unirme a una empresa en la que pueda tener responsabilidades y pueda aprovechar todas las competencias desarrolladas durante mis estudios.</span>
                                 </p>
                             </div>
                         </div>
@@ -1020,6 +1036,10 @@
     <footer class="bg-dark-base py-10 text-center text-xs font-medium tracking-wide text-slate-500 border-t border-dark-border/40 relative z-10">
         <p>&copy; 2026 Mathiam Taylor — Portfolio.</p>
     </footer>
+
+    <!-- Librairie jsVectorMap -->
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
 
     <script>
         // Header transition effect on scroll
@@ -1134,6 +1154,77 @@
                 cvBtn.href = 'cv-es.pdf';
             }
         }
+
+        // Initialisation de la carte du monde interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = new jsVectorMap({
+                selector: '#map-container',
+                map: 'world',
+                zoomButtons: false, // On cache les boutons pour un rendu plus épuré (design "bannière")
+                zoomOnScroll: false,
+                backgroundColor: 'transparent',
+                regionStyle: {
+                    initial: {
+                        fill: '#161F30', // Couleur de tes cartes (dark-card)
+                        stroke: '#23354F', // Couleur de tes bordures (dark-border)
+                        strokeWidth: 0.5,
+                        fillOpacity: 1
+                    },
+                    hover: {
+                        fillOpacity: 0.8,
+                        cursor: 'pointer'
+                    }
+                },
+                series: {
+                    regions: [{
+                        attribute: 'fill',
+                        scale: {
+                            visited: '#3b82f6', // Bleu (Brand-blue)
+                            future: '#10b981'   // Vert (Brand-pin)
+                        },
+                        values: {
+                            US: 'visited', // États-Unis
+                            GB: 'visited', // Angleterre
+                            ES: 'visited', // Espagne
+                            IT: 'visited', // Italie
+                            NL: 'visited', // Pays-Bas
+                            SE: 'visited', // Suède
+                            AL: 'visited', // Albanie
+                            CI: 'visited', // Côte d'Ivoire
+                            IN: 'visited', // Inde
+                            PE: 'future'   // Pérou
+                        }
+                    }]
+                },
+                onRegionTooltipShow(event, tooltip, code) {
+                    const futureMsg = {
+                        fr: ' (Prochaine destination - Sept. 2026)',
+                        en: ' (Next destination - Sept 2026)',
+                        es: ' (Próximo destino - Sept. 2026)'
+                    };
+                    
+                    const visitedMsg = {
+                        fr: ' (Visité)',
+                        en: ' (Visited)',
+                        es: ' (Visitado)'
+                    };
+
+                    // Détection de la langue actuelle pour traduire la bulle
+                    let currentLang = 'fr';
+                    if (!document.querySelector('.lang-en').classList.contains('hidden')) currentLang = 'en';
+                    if (!document.querySelector('.lang-es').classList.contains('hidden')) currentLang = 'es';
+
+                    // Si c'est le Pérou
+                    if (code === 'PE') {
+                        tooltip.text(tooltip.text() + futureMsg[currentLang]);
+                    } 
+                    // Si c'est un pays déjà visité
+                    else if (['US', 'GB', 'ES', 'IT', 'NL', 'SE', 'AL', 'CI', 'IN'].includes(code)) {
+                        tooltip.text(tooltip.text() + visitedMsg[currentLang]);
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
