@@ -126,19 +126,37 @@
         </div>
     </header>
 
-    <section class="relative min-h-[90vh] flex flex-col justify-center py-20 z-10">
-        <!-- Badges flottants -->
-        <div class="absolute top-1/4 left-[5%] lg:left-[10%] xl:left-[15%] glass-card px-5 py-2.5 rounded-full flex items-center gap-3 float-animation hidden md:flex shadow-lg shadow-brand-pin/10" style="animation-delay: 0s;">
-            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-pin/20 text-brand-pin"><i class="fa-solid fa-bullseye"></i></div>
-            <span class="text-xs font-bold text-slate-200 tracking-wide"><span class="lang-fr">Gestion de projet</span><span class="lang-en hidden">Project Management</span><span class="lang-es hidden">Gestión de proyectos</span></span>
-        </div>
-        <div class="absolute bottom-1/3 right-[5%] lg:right-[10%] xl:right-[15%] glass-card px-5 py-2.5 rounded-full flex items-center gap-3 float-animation hidden md:flex shadow-lg shadow-brand-blue/10" style="animation-delay: -2.5s;">
-            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-blue/20 text-brand-blue"><i class="fa-solid fa-earth-americas"></i></div>
-            <span class="text-xs font-bold text-slate-200 tracking-wide"><span class="lang-fr">Profil International</span><span class="lang-en hidden">International Profile</span><span class="lang-es hidden">Perfil Internacional</span></span>
-        </div>
+    <section class="relative min-h-[90vh] flex flex-col justify-center py-20 z-10 overflow-hidden">
+        
+        <!-- Nouveaux CTA flottants cliquables -->
+        <a href="#competences" class="absolute top-1/4 left-[2%] xl:left-[8%] glass-card px-5 py-2.5 rounded-full hidden lg:flex items-center gap-2 float-animation text-xs font-bold text-brand-pin hover:bg-brand-pin hover:text-dark-base transition-all duration-300 shadow-lg shadow-brand-pin/10" style="animation-delay: 0s;">
+            <i class="fa-solid fa-bullseye"></i> 
+            <span class="lang-fr">Marketing</span><span class="lang-en hidden">Marketing</span><span class="lang-es hidden">Marketing</span>
+        </a>
+        <a href="#competences" class="absolute top-1/2 left-[5%] xl:left-[4%] glass-card px-5 py-2.5 rounded-full hidden lg:flex items-center gap-2 float-animation text-xs font-bold text-brand-blue hover:bg-brand-blue hover:text-dark-base transition-all duration-300 shadow-lg shadow-brand-blue/10" style="animation-delay: -1.5s;">
+            <i class="fa-solid fa-bars-progress"></i> 
+            <span class="lang-fr">Gestion de projet</span><span class="lang-en hidden">Project Management</span><span class="lang-es hidden">Gestión de proyectos</span>
+        </a>
+        <a href="#interets" class="absolute bottom-1/4 left-[2%] xl:left-[8%] glass-card px-5 py-2.5 rounded-full hidden lg:flex items-center gap-2 float-animation text-xs font-bold text-brand-ochre hover:bg-brand-ochre hover:text-dark-base transition-all duration-300 shadow-lg shadow-brand-ochre/10" style="animation-delay: -3s;">
+            <i class="fa-solid fa-compass"></i> 
+            <span class="lang-fr">Découverte</span><span class="lang-en hidden">Discovery</span><span class="lang-es hidden">Descubrimiento</span>
+        </a>
+
+        <a href="#competences" class="absolute top-1/3 right-[2%] xl:right-[8%] glass-card px-5 py-2.5 rounded-full hidden lg:flex items-center gap-2 float-animation text-xs font-bold text-purple-400 hover:bg-purple-400 hover:text-dark-base transition-all duration-300 shadow-lg shadow-purple-500/10" style="animation-delay: -0.5s;">
+            <i class="fa-solid fa-comments"></i> 
+            <span class="lang-fr">Communication</span><span class="lang-en hidden">Communication</span><span class="lang-es hidden">Comunicación</span>
+        </a>
+        <a href="#interets" class="absolute top-[60%] right-[5%] xl:right-[4%] glass-card px-5 py-2.5 rounded-full hidden lg:flex items-center gap-2 float-animation text-xs font-bold text-emerald-400 hover:bg-emerald-400 hover:text-dark-base transition-all duration-300 shadow-lg shadow-emerald-500/10" style="animation-delay: -2s;">
+            <i class="fa-solid fa-fire"></i> 
+            <span class="lang-fr">Sport</span><span class="lang-en hidden">Sports</span><span class="lang-es hidden">Deporte</span>
+        </a>
+        <a href="#interets" class="absolute bottom-[20%] right-[2%] xl:right-[8%] glass-card px-5 py-2.5 rounded-full hidden lg:flex items-center gap-2 float-animation text-xs font-bold text-pink-400 hover:bg-pink-400 hover:text-dark-base transition-all duration-300 shadow-lg shadow-pink-500/10" style="animation-delay: -3.5s;">
+            <i class="fa-solid fa-masks-theater"></i> 
+            <span class="lang-fr">Culture</span><span class="lang-en hidden">Culture</span><span class="lang-es hidden">Cultura</span>
+        </a>
 
         <div class="mx-auto max-w-7xl px-6 w-full text-center relative z-10 mt-10">
-            <div class="flex justify-center mb-8">
+            <div class="flex justify-center mb-10">
                 <span class="inline-flex items-center gap-2 rounded-full border border-brand-pin/30 bg-brand-pin/10 px-4 py-1.5 text-xs font-bold tracking-wider text-brand-pin shadow-[0_0_15px_rgba(16,185,129,0.2)]">
                     <span class="h-2 w-2 rounded-full bg-brand-pin animate-pulse"></span>
                     <span class="lang-fr">Disponible à partir de septembre 2027</span>
@@ -147,30 +165,49 @@
                 </span>
             </div>
 
-            <h1 class="text-5xl font-black tracking-tight sm:text-7xl lg:text-8xl relative inline-block">
+            <!-- Galerie de 3 photos -->
+            <div class="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 mb-8">
+                <div class="w-24 h-36 sm:w-32 sm:h-48 md:w-36 md:h-52 overflow-hidden rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] transform translate-y-4 transition-transform hover:scale-105">
+                    <img src="nyc.png" alt="NYC" class="w-full h-full object-cover object-center">
+                </div>
+                <div class="w-28 h-40 sm:w-36 sm:h-52 md:w-44 md:h-60 overflow-hidden rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.8)] relative z-10 transform -translate-y-4 transition-transform hover:scale-105">
+                    <img src="IMG_4191.jpeg" alt="Mathiam Taylor" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="w-24 h-36 sm:w-32 sm:h-48 md:w-36 md:h-52 overflow-hidden rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] transform translate-y-4 transition-transform hover:scale-105">
+                    <img src="bad.png" alt="Badminton" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+
+            <h1 class="text-5xl font-black tracking-tight sm:text-7xl lg:text-8xl relative inline-block mt-4">
                 Mathiam <span class="bg-gradient-to-r from-brand-pin via-emerald-400 to-brand-blue bg-clip-text text-transparent">Taylor</span>
             </h1>
             
-            <p class="mt-10 max-w-4xl text-base text-slate-400 sm:text-lg mx-auto leading-relaxed">
+            <p class="mt-8 max-w-4xl text-base text-slate-400 sm:text-lg mx-auto leading-relaxed">
                 <span class="lang-fr">
-                    Actuellement en troisième année de <strong class="text-white font-bold">BUT Techniques de Commercialisation</strong> à Bordeaux (Parcours <strong class="text-white font-bold">Marketing Digital, E-Business et Entrepreneuriat</strong>) et en alternance à l’Office de Tourisme du Pays Tarusate, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’Université de Lima (Pérou) dans le cadre d’un <strong class="text-white font-bold">Diplôme Universitaire d'Etudes Technologiques Internationales</strong> (DUETI).
+                    Actuellement en troisième année de <strong class="text-white">BUT Techniques de Commercialisation</strong> à Bordeaux (Parcours <strong class="text-white">Marketing Digital, E-Business et Entrepreneuriat</strong>) et en alternance à l’Office de Tourisme du Pays Tarusate, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’Université de Lima (Pérou) dans le cadre d’un <strong class="text-white">Diplôme Universitaire d'Etudes Technologiques Internationales</strong>.
                 </span>
                 <span class="lang-en hidden">
-                    Currently in my third year of a <strong class="text-white font-bold">Bachelor's in Business and Marketing</strong> in Bordeaux (<strong class="text-white font-bold">Digital Marketing, E-Business, and Entrepreneurship</strong> track) and doing a work-study program at the Pays Tarusate Tourist Office, I am preparing for a one-year university exchange at the University of Lima (Peru) as part of an <strong class="text-white font-bold">International Technological University Diploma</strong> (DUETI).
+                    Currently in my third year of a <strong class="text-white">Bachelor's in Business and Marketing</strong> in Bordeaux (<strong class="text-white">Digital Marketing, E-Business, and Entrepreneurship</strong> track) and doing a work-study program at the Pays Tarusate Tourist Office, I am preparing for a one-year university exchange at the University of Lima (Peru) as part of an <strong class="text-white">International Technological University Diploma</strong>.
                 </span>
                 <span class="lang-es hidden">
-                    Actualmente en mi tercer año de <strong class="text-white font-bold">Grado en Comercialización</strong> en Burdeos (especialidad en <strong class="text-white font-bold">Marketing Digital, E-Business y Emprendimiento</strong>) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un <strong class="text-white font-bold">Diploma Universitario de Estudios Tecnológicos Internacionales</strong> (DUETI).
+                    Actualmente en mi tercer año de <strong class="text-white">Grado en Comercialización</strong> en Burdeos (especialidad en <strong class="text-white">Marketing Digital, E-Business y Emprendimiento</strong>) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un <strong class="text-white">Diploma Universitario de Estudios Tecnológicos Internacionales</strong>.
                 </span>
             </p>
+
+            <!-- Logos sous le texte -->
+            <div class="flex justify-center items-center gap-8 md:gap-16 mt-10">
+                <img src="otpt.png" alt="Office de Tourisme du Pays Tarusate" class="h-12 sm:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity">
+                <img src="BM_TCOBX_RVB.webp" alt="Tech de Co Bordeaux" class="h-12 sm:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity">
+            </div>
         </div>
 
         <!-- Bouton Découvrir -->
-        <div class="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation">
+        <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 float-animation hover:text-white transition-colors cursor-pointer">
             <span class="text-[10px] font-bold uppercase tracking-widest"><span class="lang-fr">Découvrir</span><span class="lang-en hidden">Discover</span><span class="lang-es hidden">Descubrir</span></span>
-            <div class="h-8 w-5 rounded-full border-2 border-slate-500 flex justify-center pt-1">
-                <div class="h-1.5 w-1.5 rounded-full bg-slate-500 animate-bounce"></div>
+            <div class="h-8 w-5 rounded-full border-2 border-current flex justify-center pt-1">
+                <div class="h-1.5 w-1.5 rounded-full bg-current animate-bounce"></div>
             </div>
-        </div>
+        </a>
     </section>
 
     <section id="about" class="py-32 relative z-10 border-t border-dark-border/20">
