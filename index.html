@@ -44,6 +44,8 @@
 
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
         .float-animation { animation: float 5s ease-in-out infinite; }
+        @keyframes float-slow { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+        .float-slow { animation: float-slow 6s ease-in-out infinite; }
         
         .hidden { display: none !important; }
 
@@ -126,84 +128,88 @@
         </div>
     </header>
 
-    <section class="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center pt-8 pb-16 z-10 overflow-hidden">
+    <section class="relative min-h-[85vh] flex items-center justify-center pt-8 pb-12 z-10 overflow-hidden">
         
-        <!-- Nouveaux CTA flottants cliquables -->
-        <a href="#competences" class="absolute top-[20%] left-[2%] xl:left-[6%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-animation text-[11px] font-bold text-brand-pin hover:bg-brand-pin hover:text-dark-base transition-all duration-300 shadow-lg shadow-brand-pin/10" style="animation-delay: 0s;">
+        <!-- Mots-clés flottants (CTA) dispersés de manière créative -->
+        <a href="#competences" class="absolute top-[15%] left-[5%] glass-card px-4 py-2 rounded-full hidden md:flex items-center gap-2 float-slow text-[11px] font-bold text-brand-pin hover:bg-brand-pin hover:text-dark-base transition-all duration-300 shadow-lg" style="animation-delay: 0s;">
             <i class="fa-solid fa-bullseye"></i> 
             <span class="lang-fr">Marketing</span><span class="lang-en hidden">Marketing</span><span class="lang-es hidden">Marketing</span>
         </a>
-        <a href="#competences" class="absolute top-[45%] left-[4%] xl:left-[3%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-animation text-[11px] font-bold text-brand-blue hover:bg-brand-blue hover:text-dark-base transition-all duration-300 shadow-lg shadow-brand-blue/10" style="animation-delay: -1.5s;">
+        <a href="#interets" class="absolute bottom-[25%] left-[8%] glass-card px-4 py-2 rounded-full hidden md:flex items-center gap-2 float-slow text-[11px] font-bold text-emerald-400 hover:bg-emerald-400 hover:text-dark-base transition-all duration-300 shadow-lg" style="animation-delay: -1.5s;">
+            <i class="fa-solid fa-fire"></i> 
+            <span class="lang-fr">Sport</span><span class="lang-en hidden">Sports</span><span class="lang-es hidden">Deporte</span>
+        </a>
+        <a href="#competences" class="absolute top-[10%] right-[30%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-slow text-[11px] font-bold text-brand-blue hover:bg-brand-blue hover:text-dark-base transition-all duration-300 shadow-lg" style="animation-delay: -3s;">
             <i class="fa-solid fa-bars-progress"></i> 
             <span class="lang-fr">Gestion de projet</span><span class="lang-en hidden">Project Management</span><span class="lang-es hidden">Gestión de proyectos</span>
         </a>
-        <a href="#interets" class="absolute bottom-[25%] left-[2%] xl:left-[6%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-animation text-[11px] font-bold text-brand-ochre hover:bg-brand-ochre hover:text-dark-base transition-all duration-300 shadow-lg shadow-brand-ochre/10" style="animation-delay: -3s;">
+        <a href="#competences" class="absolute top-[40%] right-[5%] glass-card px-4 py-2 rounded-full hidden md:flex items-center gap-2 float-slow text-[11px] font-bold text-purple-400 hover:bg-purple-400 hover:text-dark-base transition-all duration-300 shadow-lg" style="animation-delay: -0.5s;">
+            <i class="fa-solid fa-comments"></i> 
+            <span class="lang-fr">Communication</span><span class="lang-en hidden">Communication</span><span class="lang-es hidden">Comunicación</span>
+        </a>
+        <a href="#interets" class="absolute bottom-[20%] right-[10%] glass-card px-4 py-2 rounded-full hidden md:flex items-center gap-2 float-slow text-[11px] font-bold text-pink-400 hover:bg-pink-400 hover:text-dark-base transition-all duration-300 shadow-lg" style="animation-delay: -2s;">
+            <i class="fa-solid fa-masks-theater"></i> 
+            <span class="lang-fr">Culture</span><span class="lang-en hidden">Culture</span><span class="lang-es hidden">Cultura</span>
+        </a>
+        <a href="#interets" class="absolute bottom-[10%] left-[45%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-slow text-[11px] font-bold text-brand-ochre hover:bg-brand-ochre hover:text-dark-base transition-all duration-300 shadow-lg" style="animation-delay: -4s;">
             <i class="fa-solid fa-compass"></i> 
             <span class="lang-fr">Découverte</span><span class="lang-en hidden">Discovery</span><span class="lang-es hidden">Descubrimiento</span>
         </a>
 
-        <a href="#competences" class="absolute top-[25%] right-[2%] xl:right-[6%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-animation text-[11px] font-bold text-purple-400 hover:bg-purple-400 hover:text-dark-base transition-all duration-300 shadow-lg shadow-purple-500/10" style="animation-delay: -0.5s;">
-            <i class="fa-solid fa-comments"></i> 
-            <span class="lang-fr">Communication</span><span class="lang-en hidden">Communication</span><span class="lang-es hidden">Comunicación</span>
-        </a>
-        <a href="#interets" class="absolute top-[55%] right-[4%] xl:right-[3%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-animation text-[11px] font-bold text-emerald-400 hover:bg-emerald-400 hover:text-dark-base transition-all duration-300 shadow-lg shadow-emerald-500/10" style="animation-delay: -2s;">
-            <i class="fa-solid fa-fire"></i> 
-            <span class="lang-fr">Sport</span><span class="lang-en hidden">Sports</span><span class="lang-es hidden">Deporte</span>
-        </a>
-        <a href="#interets" class="absolute bottom-[20%] right-[2%] xl:right-[6%] glass-card px-4 py-2 rounded-full hidden lg:flex items-center gap-2 float-animation text-[11px] font-bold text-pink-400 hover:bg-pink-400 hover:text-dark-base transition-all duration-300 shadow-lg shadow-pink-500/10" style="animation-delay: -3.5s;">
-            <i class="fa-solid fa-masks-theater"></i> 
-            <span class="lang-fr">Culture</span><span class="lang-en hidden">Culture</span><span class="lang-es hidden">Cultura</span>
-        </a>
-
-        <div class="mx-auto max-w-7xl px-6 w-full text-center relative z-10 mt-2">
-            <div class="flex justify-center mb-6">
-                <span class="inline-flex items-center gap-2 rounded-full border border-brand-pin/30 bg-brand-pin/10 px-4 py-1 text-[11px] font-bold tracking-wider text-brand-pin shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+        <!-- Conteneur principal séparé en 2 colonnes (Texte à gauche, Collage à droite) -->
+        <div class="mx-auto max-w-7xl px-6 w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <!-- Colonne Gauche : Texte & Logos -->
+            <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+                <span class="inline-flex items-center gap-2 rounded-full border border-brand-pin/30 bg-brand-pin/10 px-4 py-1 text-[11px] font-bold tracking-wider text-brand-pin shadow-[0_0_15px_rgba(16,185,129,0.2)] mb-6">
                     <span class="h-2 w-2 rounded-full bg-brand-pin animate-pulse"></span>
                     <span class="lang-fr">Disponible à partir de septembre 2027</span>
                     <span class="lang-en hidden">Available from September 2027</span>
                     <span class="lang-es hidden">Disponible desde septiembre de 2027</span>
                 </span>
+
+                <h1 class="text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl">
+                    Mathiam <span class="bg-gradient-to-r from-brand-pin via-emerald-400 to-brand-blue bg-clip-text text-transparent">Taylor</span>
+                </h1>
+                
+                <p class="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl">
+                    <span class="lang-fr">
+                        Actuellement en troisième année de <strong>BUT Techniques de Commercialisation</strong> à Bordeaux (Parcours <strong>Marketing Digital, E-Business et Entrepreneuriat</strong>) et en alternance à l’Office de Tourisme du Pays Tarusate, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’Université de Lima (Pérou) dans le cadre d’un <strong>Diplôme Universitaire d'Etudes Technologiques Internationales</strong> (DUETI).
+                    </span>
+                    <span class="lang-en hidden">
+                        Currently in my third year of a <strong>Bachelor's in Business and Marketing</strong> in Bordeaux (<strong>Digital Marketing, E-Business, and Entrepreneurship</strong> track) and doing a work-study program at the Pays Tarusate Tourist Office, I am preparing for a one-year university exchange at the University of Lima (Peru) as part of an <strong>International Technological University Diploma</strong> (DUETI).
+                    </span>
+                    <span class="lang-es hidden">
+                        Actualmente en mi tercer año de <strong>Grado en Comercialización</strong> en Burdeos (especialidad en <strong>Marketing Digital, E-Business y Emprendimiento</strong>) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un <strong>Diploma Universitario de Estudios Tecnológicos Internacionales</strong> (DUETI).
+                    </span>
+                </p>
+
+                <div class="flex items-center gap-8 mt-8">
+                    <img src="otpt.png" alt="Office de Tourisme du Pays Tarusate" class="h-14 sm:h-16 object-contain opacity-90 hover:opacity-100 transition-transform hover:scale-105">
+                    <img src="BM_TCOBX_RVB.webp" alt="Tech de Co Bordeaux" class="h-12 sm:h-14 object-contain opacity-90 hover:opacity-100 transition-transform hover:scale-105">
+                </div>
             </div>
 
-            <!-- Galerie de 3 photos - Tailles et marges réduites pour tout remonter -->
-            <div class="flex justify-center items-center gap-3 sm:gap-5 mb-4">
-                <div class="w-16 h-24 sm:w-24 sm:h-32 md:w-28 md:h-40 overflow-hidden rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] transform translate-y-3 transition-transform hover:scale-105">
-                    <img src="nyc.png" alt="NYC" class="w-full h-full object-cover object-center">
+            <!-- Colonne Droite : Collage Créatif des 3 photos (Uniquement visible sur Desktop pour garder la ligne de flottaison nette sur mobile) -->
+            <div class="lg:col-span-5 hidden lg:block relative h-[450px] w-full mt-4">
+                <!-- Photo NYC (Arrière gauche) -->
+                <div class="absolute top-4 left-0 w-44 h-60 rounded-2xl overflow-hidden shadow-2xl transform -rotate-6 hover:rotate-0 hover:z-30 transition-all duration-500 z-10 border border-dark-border/50">
+                    <img src="nyc.png" alt="NYC" class="w-full h-full object-cover">
                 </div>
-                <div class="w-20 h-28 sm:w-28 sm:h-40 md:w-32 md:h-44 overflow-hidden rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.8)] relative z-10 transform -translate-y-3 transition-transform hover:scale-105">
+                <!-- Photo Badminton (Arrière droite) -->
+                <div class="absolute bottom-4 right-0 w-40 h-56 rounded-2xl overflow-hidden shadow-2xl transform rotate-6 hover:rotate-0 hover:z-30 transition-all duration-500 z-10 border border-dark-border/50">
+                    <img src="bad.png" alt="Badminton" class="w-full h-full object-cover">
+                </div>
+                <!-- Photo Principale (Devant centre) -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-52 h-72 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20 hover:scale-105 transition-transform duration-500 border border-dark-border">
                     <img src="IMG_4191.jpeg" alt="Mathiam Taylor" class="w-full h-full object-cover object-top">
                 </div>
-                <div class="w-16 h-24 sm:w-24 sm:h-32 md:w-28 md:h-40 overflow-hidden rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.5)] transform translate-y-3 transition-transform hover:scale-105">
-                    <img src="bad.png" alt="Badminton" class="w-full h-full object-cover object-center">
-                </div>
             </div>
 
-            <h1 class="text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl relative inline-block mt-2">
-                Mathiam <span class="bg-gradient-to-r from-brand-pin via-emerald-400 to-brand-blue bg-clip-text text-transparent">Taylor</span>
-            </h1>
-            
-            <!-- Texte élargi (max-w-6xl) pour prendre moins de lignes en hauteur -->
-            <p class="mt-4 max-w-6xl text-sm sm:text-base text-slate-400 mx-auto leading-relaxed">
-                <span class="lang-fr">
-                    Actuellement en troisième année de <strong class="text-white">BUT Techniques de Commercialisation</strong> à Bordeaux (Parcours <strong class="text-white">Marketing Digital, E-Business et Entrepreneuriat</strong>) et en alternance à l’Office de Tourisme du Pays Tarusate, je m’apprête à effectuer un échange universitaire d’une durée d’un an à l’Université de Lima (Pérou) dans le cadre d’un <strong class="text-white">Diplôme Universitaire d'Etudes Technologiques Internationales</strong> (DUETI).
-                </span>
-                <span class="lang-en hidden">
-                    Currently in my third year of a <strong class="text-white">Bachelor's in Business and Marketing</strong> in Bordeaux (<strong class="text-white">Digital Marketing, E-Business, and Entrepreneurship</strong> track) and doing a work-study program at the Pays Tarusate Tourist Office, I am preparing for a one-year university exchange at the University of Lima (Peru) as part of an <strong class="text-white">International Technological University Diploma</strong> (DUETI).
-                </span>
-                <span class="lang-es hidden">
-                    Actualmente en mi tercer año de <strong class="text-white">Grado en Comercialización</strong> en Burdeos (especialidad en <strong class="text-white">Marketing Digital, E-Business y Emprendimiento</strong>) y en alternancia en la Oficina de Turismo del Pays Tarusate, me preparo para realizar un intercambio universitario de un año en la Universidad de Lima (Perú) en el marco de un <strong class="text-white">Diploma Universitario de Estudios Tecnológicos Internacionales</strong> (DUETI).
-                </span>
-            </p>
-
-            <!-- Logos sous le texte - Tailles réduites -->
-            <div class="flex justify-center items-center gap-8 md:gap-16 mt-6">
-                <img src="otpt.png" alt="Office de Tourisme du Pays Tarusate" class="h-10 sm:h-12 object-contain opacity-90 hover:opacity-100 transition-opacity">
-                <img src="BM_TCOBX_RVB.webp" alt="Tech de Co Bordeaux" class="h-10 sm:h-12 object-contain opacity-90 hover:opacity-100 transition-opacity">
-            </div>
         </div>
 
-        <!-- Bouton Découvrir remonté beaucoup plus haut -->
-        <a href="#about" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-500 float-animation hover:text-white transition-colors cursor-pointer z-20">
+        <!-- Bouton Découvrir (Maintenu au-dessus de la ligne de flottaison) -->
+        <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-500 float-animation hover:text-white transition-colors cursor-pointer z-20">
             <span class="text-[9px] font-bold uppercase tracking-widest"><span class="lang-fr">Découvrir</span><span class="lang-en hidden">Discover</span><span class="lang-es hidden">Descubrir</span></span>
             <div class="h-7 w-4 rounded-full border-2 border-current flex justify-center pt-1">
                 <div class="h-1 w-1 rounded-full bg-current animate-bounce"></div>
@@ -295,7 +301,9 @@
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
                         <p class="text-[10px] font-bold text-brand-pin mb-1">Thermes de Saubusse</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Meta Business Suite</p>
+                        <p class="text-[10px] text-slate-400 flex flex-wrap gap-2">
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> Meta Business Suite</span>
+                        </p>
                     </div>
                 </div>
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
@@ -311,7 +319,9 @@
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
                         <p class="text-[10px] font-bold text-brand-pin mb-1">Office de Tourisme du Pays Tarusate</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Brevo</p>
+                        <p class="text-[10px] text-slate-400 flex flex-wrap gap-2">
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> Brevo</span>
+                        </p>
                     </div>
                 </div>
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
@@ -327,7 +337,9 @@
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
                         <p class="text-[10px] font-bold text-brand-pin mb-1">BUT Techniques de Commercialisation</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> WordPress</p>
+                        <p class="text-[10px] text-slate-400 flex flex-wrap gap-2">
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> WordPress</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -346,7 +358,10 @@
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
                         <p class="text-[10px] font-bold text-brand-blue mb-1">BSC Unna & Office de Tourisme</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Meta Business Suite, CapCut</p>
+                        <p class="text-[10px] text-slate-400 flex flex-wrap gap-2">
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> Meta Business Suite</span>
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> CapCut</span>
+                        </p>
                     </div>
                 </div>
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
@@ -362,7 +377,10 @@
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
                         <p class="text-[10px] font-bold text-brand-blue mb-1">Office de Tourisme du Pays Tarusate</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Trello, Meta Business Suite</p>
+                        <p class="text-[10px] text-slate-400 flex flex-wrap gap-2">
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> Trello</span>
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> Meta Business Suite</span>
+                        </p>
                     </div>
                 </div>
                 <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
@@ -373,12 +391,15 @@
                         <p class="text-xs text-slate-400 leading-relaxed">
                             <span class="lang-fr">Réalisation de visuels professionnels, affiches événementielles et documents de présentation.</span>
                             <span class="lang-en hidden">Creation of professional visuals, event posters, and presentation documents.</span>
-                            <span class="lang-es hidden">Creación de visuales profesionales, carteles de eventos y documentos de presentation.</span>
+                            <span class="lang-es hidden">Creación de visuales profesionales, carteles de eventos y documentos de presentación.</span>
                         </p>
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
                         <p class="text-[10px] font-bold text-brand-blue mb-1">Missions variées</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Canva, CapCut</p>
+                        <p class="text-[10px] text-slate-400 flex flex-wrap gap-2">
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> Canva</span>
+                            <span class="bg-dark-card px-2 py-1 rounded"><i class="fa-solid fa-wrench mr-1"></i> CapCut</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -475,153 +496,6 @@
                     </div>
                     <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
                         <p class="text-[10px] font-bold text-brand-blue">BSC Unna</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="tab-b" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Campagnes d'e-mailing</span><span class="lang-en hidden">Email Campaigns</span><span class="lang-es hidden">Campañas de e-mailing</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Création de newsletters, segmentation des bases de contacts et analyse des envois.</span>
-                            <span class="lang-en hidden">Creation of newsletters, segmentation of contact databases, and analysis of broadcasts.</span>
-                            <span class="lang-es hidden">Creación de newsletters, segmentación de bases de contactos y análisis de envíos.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-blue mb-1">Office de Tourisme du Pays Tarusate</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Brevo</p>
-                    </div>
-                </div>
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Animation de réseaux sociaux</span><span class="lang-en hidden">Social Media Management</span><span class="lang-es hidden">Gestión de redes sociales</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Création de contenus, programmation et modération, y compris en langue étrangère.</span>
-                            <span class="lang-en hidden">Content creation, scheduling, and moderation, including in foreign languages.</span>
-                            <span class="lang-es hidden">Creación de contenidos, programación y moderación, incluso en idiomas extranjeros.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-blue mb-1">BSC Unna & Office de Tourisme</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Meta Business Suite, CapCut</p>
-                    </div>
-                </div>
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Création de supports graphiques</span><span class="lang-en hidden">Graphic Design</span><span class="lang-es hidden">Diseño Gráfico</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Réalisation de visuels professionnels, affiches événementielles et documents de présentation.</span>
-                            <span class="lang-en hidden">Creation of professional visuals, event posters, and presentation documents.</span>
-                            <span class="lang-es hidden">Creación de visuales profesionales, carteles de eventos y documentos de presentación.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-blue mb-1">Missions variées</p>
-                        <p class="text-[10px] text-slate-400"><i class="fa-solid fa-wrench mr-1"></i> Canva</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="tab-c" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Accueil et relation client</span><span class="lang-en hidden">Customer Relations</span><span class="lang-es hidden">Atención al cliente</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Prise en charge des visiteurs, écoute active et orientation dans des environnements exigeants.</span>
-                            <span class="lang-en hidden">Handling visitors, active listening, and directing them in demanding environments.</span>
-                            <span class="lang-es hidden">Atención de visitantes, escucha activa y orientación en entornos exigentes.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-pin">Crédit Agricole</p>
-                    </div>
-                </div>
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Vente et conseil</span><span class="lang-en hidden">Sales</span><span class="lang-es hidden">Ventas y asesoramiento</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Analyse fine des besoins en magasin pour formuler des recommandations de produits adaptées.</span>
-                            <span class="lang-en hidden">Detailed analysis of needs in-store to formulate adapted product recommendations.</span>
-                            <span class="lang-es hidden">Análisis detallado de necesidades en tienda para formular recomendaciones adaptadas.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-pin">SPORT 2000</p>
-                    </div>
-                </div>
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Négociation et prospection</span><span class="lang-en hidden">Negotiation & Prospecting</span><span class="lang-es hidden">Negociación y prospección</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Techniques d'approche commerciale mises en pratique pour le développement de partenariats.</span>
-                            <span class="lang-en hidden">Commercial approach techniques applied for partnership development.</span>
-                            <span class="lang-es hidden">Técnicas de aproximación comercial aplicadas para el desarrollo de alianzas.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-pin">Projets universitaires (BUT TC)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="tab-d" class="tab-content hidden grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Tableaux de bord et suivi</span><span class="lang-en hidden">Dashboards & Tracking</span><span class="lang-es hidden">Cuadros de mando y seguimiento</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Création d'outils automatisés sur tableur pour faciliter la lecture des données.</span>
-                            <span class="lang-en hidden">Creation of automated tools on spreadsheets to facilitate data reading.</span>
-                            <span class="lang-es hidden">Creación de herramientas automatizadas en hojas de cálculo para facilitar la lectura de datos.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-blue">Thermes de Saubusse</p>
-                    </div>
-                </div>
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Événementiel</span><span class="lang-en hidden">Event Management</span><span class="lang-es hidden">Gestión de eventos</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Organisation, logistique et promotion d'événements locaux (Printemps des Landes, etc.).</span>
-                            <span class="lang-en hidden">Organization, logistics, and promotion of local events (Printemps des Landes, etc.).</span>
-                            <span class="lang-es hidden">Organización, logística y promoción de eventos locales (Printemps des Landes, etc.).</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-blue">Office de Tourisme du Pays Tarusate</p>
-                    </div>
-                </div>
-                <div class="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">
-                            <span class="lang-fr">Projets étudiants</span><span class="lang-en hidden">Student Projects</span><span class="lang-es hidden">Proyectos estudiantiles</span>
-                        </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            <span class="lang-fr">Contribution au "TC Challenge" : organisation de tournois sportifs (FIFA, foot à 5) et coordination globale.</span>
-                            <span class="lang-en hidden">Contribution to the "TC Challenge": organizing sports tournaments (FIFA, 5-a-side football) and overall coordination.</span>
-                            <span class="lang-es hidden">Contribución al "TC Challenge": organización de torneos deportivos (FIFA, fútbol 5) y coordinación global.</span>
-                        </p>
-                    </div>
-                    <div class="mt-6 rounded-xl bg-dark-base border border-dark-border/60 p-4">
-                        <p class="text-[10px] font-bold text-brand-blue">Projet IUT (BUT TC)</p>
                     </div>
                 </div>
             </div>
@@ -849,8 +723,8 @@
             <div class="grid gap-8 lg:grid-cols-3">
                 <!-- Universidad de Lima -->
                 <div class="glass-card rounded-2xl flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-brand-pin/50 group">
-                    <div class="w-full h-32 bg-white/5 flex items-center justify-center p-6 border-b border-dark-border/50">
-                        <img src="ulima.png" alt="Universidad de Lima" class="max-w-full max-h-full object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <div class="w-full h-32 bg-white flex items-center justify-center p-6 border-b border-dark-border/50">
+                        <img src="ulima.png" alt="Universidad de Lima" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow">
                         <div class="mb-5">
@@ -875,8 +749,8 @@
 
                 <!-- BUT TC Bordeaux -->
                 <div class="glass-card rounded-2xl flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/50 group">
-                    <div class="w-full h-32 bg-white/5 flex items-center justify-center p-6 border-b border-dark-border/50">
-                        <img src="BM_TCOBX_RVB.webp" alt="IUT Bordeaux" class="max-w-full max-h-full object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <div class="w-full h-32 bg-white flex items-center justify-center p-6 border-b border-dark-border/50">
+                        <img src="BM_TCOBX_RVB.webp" alt="IUT Bordeaux" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow">
                         <div class="mb-5">
@@ -898,8 +772,8 @@
 
                 <!-- Lycée de Borda -->
                 <div class="glass-card rounded-2xl flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-slate-400/50 group">
-                    <div class="w-full h-32 bg-white/5 flex items-center justify-center p-6 border-b border-dark-border/50">
-                        <img src="borda.png" alt="Lycée de Borda" class="max-w-full max-h-full object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <div class="w-full h-32 bg-white flex items-center justify-center p-6 border-b border-dark-border/50">
+                        <img src="borda.png" alt="Lycée de Borda" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 md:p-8 flex flex-col flex-grow">
                         <div class="mb-5">
